@@ -3,6 +3,31 @@ import json
 
 from googleapiclient.discovery import build
 
+MAX_ITEMS = 10
+
+def get_google_search_items(api_key, engine_id, words):
+    service = build(
+        "customsearch", "v1", developerKey=api_key
+    )
+
+    res = (
+        service.cse()
+        .list(
+            q=" ".join(words),
+            cx=engine_id,
+        )
+        .execute()
+    )
+
+    # Get top ten items
+    items = res['items'][:MAX_ITEMS]
+    return items
+
+def get_formatted_items(items):
+    def get_attr(item):
+        return {'title': item['title'], 'url': item['link'], 'description': item['snippet']}
+    return [get_attr(i) for i in items]
+
 def main():
     if len(sys.argv) < 5:
         print('Required input format: <google api key> <google engine id> <precision> <query>')
@@ -13,21 +38,13 @@ def main():
     PRECISION = float(sys.argv[3])
     WORDS = sys.argv[4:]
 
-    print(GOOGLE_API_KEY, GOOGLE_ENGINE_ID, PRECISION, WORDS)
+    # Make search API call
+    items = get_google_search_items(GOOGLE_API_KEY, GOOGLE_ENGINE_ID, WORDS)
 
-    service = build(
-        "customsearch", "v1", developerKey="GOOGLE_API_KEY"
-    )
+    # Format items to desired output
+    output = get_formatted_items(items)
 
-    res = (
-        service.cse()
-        .list(
-            q="lectures",
-            cx="017576662512468239146:omuauf_lfve",
-        )
-        .execute()
-    )
-    print(json.dumps(res, sort_keys=True, indent=4))
+    print(json.dumps(output, indent=4))
 
 
 if __name__ == "__main__":
