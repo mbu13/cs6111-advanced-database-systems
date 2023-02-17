@@ -28,6 +28,20 @@ def get_formatted_items(items):
         return {'title': item['title'], 'url': item['link'], 'description': item['snippet']}
     return [get_attr(i) for i in items]
 
+def get_relevant_docs(output):
+    precision = 0
+
+    for i in output:
+        print(json.dumps(i, indent=4))
+        rel = input("Relevant (Y/N)?")
+        while rel != 'Y' or rel != 'N':
+            rel = input("Relevant (Y/N)? Only type Y or N")
+        if rel == 'Y':
+            precision += 1
+        
+    return precision, output
+        
+
 def main():
     if len(sys.argv) < 5:
         print('Required input format: <google api key> <google engine id> <precision> <query>')
@@ -43,9 +57,8 @@ def main():
 
     # Format items to desired output
     output = get_formatted_items(items)
-    for i in output:
-        print(json.dumps(i, indent=4))
-        print("indent")
+    #precision, relevant = get_relevant_docs(output)
+    print(type(output))
         
 
 
