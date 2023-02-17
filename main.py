@@ -31,8 +31,8 @@ def get_formatted_items(items):
 def get_relevant_docs(output):
     precision = 0
     relevant = []
-    for i in output:
-        print(json.dumps(i, indent=4))
+    for i, doc in enumerate(output):
+        print(json.dumps(doc, indent=4))
         rel = input("Relevant (Y/N)? ")
         while rel != "Y"  and rel != "N":
             rel = input("Relevant (Y/N)? Only type Y or N ")
