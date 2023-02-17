@@ -30,7 +30,7 @@ def get_formatted_items(items):
 
 def get_relevant_docs(output):
     precision = 0
-
+    relevant = []
     for i in output:
         print(json.dumps(i, indent=4))
         rel = input("Relevant (Y/N)?")
@@ -38,8 +38,9 @@ def get_relevant_docs(output):
             rel = input("Relevant (Y/N)? Only type Y or N")
         if rel == 'Y':
             precision += 1
+            relevant.append(output[i])
         
-    return precision, output
+    return precision/10, relevant
         
 
 def main():
@@ -57,8 +58,7 @@ def main():
 
     # Format items to desired output
     output = get_formatted_items(items)
-    #precision, relevant = get_relevant_docs(output)
-    print(type(output))
+    precision, relevant = get_relevant_docs(output)
         
 
 
