@@ -44,7 +44,7 @@ def get_relevant_docs(output):
         
 def print_feedback(precision, words):
     print("======================\n"
-    + "Query: " + str(words) + "\nPrecision" + str(precision) + 
+    + "Query: " + str(words) + "\nPrecision: " + str(precision) + 
     "\nDesired precision reached, done")
     return
 
