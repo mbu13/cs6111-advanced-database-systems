@@ -41,12 +41,6 @@ def get_relevant_docs(output):
             relevant.append(output[i])
         
     return precision/10, relevant
-        
-def print_feedback(precision, words):
-    print("======================\n"
-    + "Query: " + str(words) + "\nPrecision: " + str(precision) + 
-    "\nDesired precision reached, done")
-    return
 
 def main():
     if len(sys.argv) < 5:
@@ -63,13 +57,24 @@ def main():
 
     # Format items to desired output
     output = get_formatted_items(items)
+    if len(output) < 10:
+        print("======================\n"
+            + "Query: " + str(WORDS) + 
+            "\nQuery returned less than 10 results, done")
+        exit("")
+
     precision, relevant = get_relevant_docs(output)
     if precision >= PRECISION:
-        print_feedback(precision, WORDS)
+        print("======================\n"
+            + "Query: " + str(WORDS) + "\nPrecision: " + str(precision) + 
+            "\nDesired precision reached, done")
         exit("")
-        
 
-
+    if precision == 0:
+        print("======================\n"
+            + "Query: " + str(WORDS) + "\nPrecision: " + str(precision) + 
+            "\nPrecision = 0, Done")
+        exit("")
 
 if __name__ == "__main__":
     main()
