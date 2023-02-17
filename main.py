@@ -43,8 +43,11 @@ def main():
 
     # Format items to desired output
     output = get_formatted_items(items)
+    for i in output:
+        print(json.dumps(i, indent=4))
+        print("indent")
+        
 
-    print(json.dumps(output, indent=4))
 
 
 if __name__ == "__main__":
