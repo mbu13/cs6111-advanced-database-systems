@@ -33,9 +33,9 @@ def get_relevant_docs(output):
     relevant = []
     for i in output:
         print(json.dumps(i, indent=4))
-        rel = input("Relevant (Y/N)?")
+        rel = input("Relevant (Y/N)? ")
         while rel != 'Y' or rel != 'N':
-            rel = input("Relevant (Y/N)? Only type Y or N")
+            rel = input("Relevant (Y/N)? Only type Y or N ")
         if rel == 'Y':
             precision += 1
             relevant.append(output[i])
