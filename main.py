@@ -42,6 +42,11 @@ def get_relevant_docs(output):
         
     return precision/10, relevant
         
+def print_feedback(precision, words):
+    print("======================\n"
+    + "Query: " + str(words) + "\nPrecision" + str(precision) + 
+    "\nDesired precision reached, done")
+    return
 
 def main():
     if len(sys.argv) < 5:
@@ -59,8 +64,9 @@ def main():
     # Format items to desired output
     output = get_formatted_items(items)
     precision, relevant = get_relevant_docs(output)
-    print(precision)
-    print(json.dumps(relevant, indent=4))
+    if precision >= PRECISION:
+        print_feedback(precision, WORDS)
+        exit("")
         
 
 
