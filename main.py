@@ -105,7 +105,7 @@ def main():
     # TODO: analyze relevant doc descriptions
     #       query expansion (Rocchio's alrgorithm)
     freq = word_frequency(relevant)
-    doc = doc_freq(relevant, freq)
+    doc = doc_freq(freq)
     scores = tf_idf(freq, doc, len(relevant))
     print(freq)
 
