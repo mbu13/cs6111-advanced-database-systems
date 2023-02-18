@@ -46,7 +46,7 @@ def get_relevant_docs(output):
 def word_frequency(relevant):
     words = {}
     for result in relevant:
-        sent = result['description'].split()
+        sent = result['description'].lower().split()
         for word in sent:
             if word not in words:
                 words[word] = 0
@@ -56,7 +56,7 @@ def word_frequency(relevant):
 def doc_freq(relevant, freq):
     doc = {}
     for result in relevant:
-        sent = result['description'].split()
+        sent = result['description'].lower().split()
         for key in freq:
             if key not in doc:
                 doc[key] = 0
@@ -109,7 +109,7 @@ def main():
     freq = word_frequency(relevant)
     doc = doc_freq(relevant, freq)
     scores = tf_idf(freq, doc, len(relevant))
-    print(scores)
+    print(doc)
 
 
 
