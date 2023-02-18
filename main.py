@@ -42,14 +42,29 @@ def get_relevant_docs(output):
         
     return precision/10, relevant
 
-def tf_idf(relevant):
-    scores = {}
+def word_frequency(relevant):
+    words = {}
     for result in relevant:
         sent = result['description'].split()
         for word in sent:
-            if word not in scores:
-                scores[word] = 0
-            scores[word] += 1
+            if word not in words:
+                words[word] = 0
+            words[word] += 1
+    return words
+
+def doc_freq(relevant, freq):
+    doc = {}
+    for result in relevant:
+        sent = result['description'].split()
+        for key in freq:
+            if key not in doc:
+                doc[key] = 0
+            if key in sent:
+                doc[key] += 1
+    return doc
+
+def tf_idf(freq):
+    scores = {}
     return scores
 
 def main():
@@ -88,8 +103,10 @@ def main():
 
     # TODO: analyze relevant doc descriptions
     #       query expansion (Rocchio's alrgorithm)
-    scores = tf_idf(relevant)
-    print(scores)
+    freq = word_frequency(relevant)
+    doc = doc_freq(relevant, freq)
+    print(doc)
+
 
 
 if __name__ == "__main__":
