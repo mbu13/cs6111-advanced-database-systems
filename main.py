@@ -63,10 +63,12 @@ def doc_freq(freq):
     return doc
 
 def tf_idf(freq, doc, N):
-    scores = {}
-    for key in freq:
-        scores[key] = (1 + math.log(freq[key], 10)) * (math.log(N/doc[key], 10))
-    return scores
+    score_list = freq
+    for i, result in enumerate(score_list):
+        for key in result:
+            score_list[i][key] = (1 + math.log(result[key], 10)) * (math.log(N/doc[key],10))
+
+    return score_list
 
 def main():
     if len(sys.argv) < 5:
@@ -104,10 +106,10 @@ def main():
 
     # TODO: analyze relevant doc descriptions
     #       query expansion (Rocchio's alrgorithm)
-    freq = word_frequency(relevant)
-    doc = doc_freq(freq)
-    # scores = tf_idf(freq, doc, len(relevant))
-    print(doc)
+    freq_list = word_frequency(relevant)
+    doc = doc_freq(freq_list)
+    scores = tf_idf(freq_list, doc, len(relevant))
+    print(scores)
 
 
 
