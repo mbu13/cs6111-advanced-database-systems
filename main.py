@@ -1,5 +1,6 @@
 import sys
 import json
+import math
 
 from googleapiclient.discovery import build
 
@@ -63,8 +64,10 @@ def doc_freq(relevant, freq):
                 doc[key] += 1
     return doc
 
-def tf_idf(freq):
+def tf_idf(freq, doc, N):
     scores = {}
+    for key in freq:
+        scores[key] = (1 + math.log(freq[key], 10)) * (math.log(N/doc[key], 10))
     return scores
 
 def main():
@@ -105,7 +108,8 @@ def main():
     #       query expansion (Rocchio's alrgorithm)
     freq = word_frequency(relevant)
     doc = doc_freq(relevant, freq)
-    print(doc)
+    scores = tf_idf(freq, doc, len(relevant))
+    print(scores)
 
 
 
