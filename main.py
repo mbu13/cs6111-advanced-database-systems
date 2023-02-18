@@ -43,30 +43,30 @@ def get_relevant_docs(output):
         
     return precision/10, relevant
 
-def word_frequency(relevant):
-    doc_list = list({} for i in range(len(relevant)))
-    for i, result in enumerate(relevant):
+def word_frequency(doc_set):
+    tf_list = list({} for i in range(len(doc_set)))
+    for i, result in enumerate(doc_set):
         sent = result['description'].lower().split()
         for word in sent:
-            if word not in doc_list[i]:
-                doc_list[i][word] = 0
-            doc_list[i][word] += 1
-    return doc_list
+            if word not in tf_list[i]:
+                tf_list[i][word] = 0
+            tf_list[i][word] += 1
+    return tf_list
 
-def doc_freq(freq):
-    doc = {}
-    for rel in freq:
-        for key in rel:
-            if key not in doc:
-                doc[key] = 0
-            doc[key] += 1
-    return doc
+def doc_freq(tf_list):
+    df = {}
+    for result in tf_list:
+        for key in result:
+            if key not in df:
+                df[key] = 0
+            df[key] += 1
+    return df
 
-def tf_idf(freq, doc, N):
-    score_list = freq
+def tf_idf(tf_list, df, N):
+    score_list = tf_list
     for i, result in enumerate(score_list):
         for key in result:
-            score_list[i][key] = (1 + math.log(result[key], 10)) * (math.log(N/doc[key],10))
+            score_list[i][key] = (1 + math.log(result[key], 10)) * (math.log(N/df[key],10))
 
     return score_list
 
@@ -106,9 +106,7 @@ def main():
 
     # TODO: analyze relevant doc descriptions
     #       query expansion (Rocchio's alrgorithm)
-    freq_list = word_frequency(results)
-    doc = doc_freq(freq_list)
-    scores = tf_idf(freq_list, doc, len(results))
+    
 
 
 if __name__ == "__main__":
