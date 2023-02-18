@@ -1,5 +1,7 @@
 import sys
 import json
+import urllib
+import bs4
 
 from googleapiclient.discovery import build
 
@@ -28,6 +30,13 @@ def get_formatted_items(items):
         return {'title': item['title'], 'url': item['link'], 'description': item['snippet']}
     return [get_attr(i) for i in items]
 
+def get_html_bodies(output):
+    for doc in output:
+        link = doc['url']
+        htmlfile = urllib.urlopen(link).read()
+        soup = bs4.BeautifulSoup(htmlfile).find('body')
+    return soup
+
 def main():
     if len(sys.argv) < 5:
         print('Required input format: <google api key> <google engine id> <precision> <query>')
@@ -44,8 +53,8 @@ def main():
     # Format items to desired output
     output = get_formatted_items(items)
 
-    print(json.dumps(output, indent=4))
-
+    bodies = get_html_bodies(output)
+    print(bodies)
 
 if __name__ == "__main__":
     main()
