@@ -53,15 +53,13 @@ def word_frequency(relevant):
             doc_list[i][word] += 1
     return doc_list
 
-def doc_freq(relevant, freq):
+def doc_freq(freq):
     doc = {}
-    for result in relevant:
-        sent = result['description'].lower().split()
-        for key in freq:
+    for rel in freq:
+        for key in rel:
             if key not in doc:
                 doc[key] = 0
-            if key in sent:
-                doc[key] += 1
+            doc[key] += 1
     return doc
 
 def tf_idf(freq, doc, N):
