@@ -42,6 +42,15 @@ def get_relevant_docs(output):
         
     return precision/10, relevant
 
+def tf_idf(relevant):
+    scores = {}
+    for result in relevant:
+        for word in result["description"]:
+            if word not in scores:
+                scores[word] = 0
+            scores[word] += 1
+    return scores
+
 def main():
     if len(sys.argv) < 5:
         print('Required input format: <google api key> <google engine id> <precision> <query>')
@@ -78,8 +87,9 @@ def main():
 
     # TODO: analyze relevant doc descriptions
     #       query expansion (Rocchio's alrgorithm)
-    print(type(relevant[0]))
-    print(relevant[0]["description"])
+    scores = tf_idf(relevant)
+    print(scores)
+
 
 if __name__ == "__main__":
     main()
