@@ -1,6 +1,7 @@
 import sys
 import json
 import math
+import urllib
 
 from googleapiclient.discovery import build
 
@@ -32,6 +33,7 @@ def get_formatted_items(items):
 def get_relevant_docs(output):
     precision = 0
     relevant = []
+    nr = []
     for i, doc in enumerate(output):
         print(json.dumps(doc, indent=4))
         rel = input("Relevant (Y/N)? ")
@@ -40,8 +42,10 @@ def get_relevant_docs(output):
         if rel == 'Y':
             precision += 1
             relevant.append(output[i])
+        elif rel == 'N':
+            nr.append(output[i])
         
-    return precision/10, relevant
+    return precision/10, relevant, nr
 
 def word_frequency(doc_set, stop):
     tf_list = list({} for i in range(len(doc_set)))
@@ -94,7 +98,7 @@ def main():
         exit("")
 
     # prompt user for relevance feedback
-    precision, relevant = get_relevant_docs(output)
+    precision, relevant, not_relevant = get_relevant_docs(output)
 
     # check if first ten documents are good enough
     if precision >= PRECISION:
