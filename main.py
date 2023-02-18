@@ -106,7 +106,10 @@ def main():
 
     # TODO: analyze relevant doc descriptions
     #       query expansion (Rocchio's alrgorithm)
-    
+    tf_list = word_frequency(output)
+    df = doc_freq(tf_list)
+    print(tf_list)
+    print(df)
 
 
 if __name__ == "__main__":
