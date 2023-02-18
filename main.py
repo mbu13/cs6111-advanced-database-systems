@@ -76,6 +76,9 @@ def main():
             "\nPrecision = 0, Done")
         exit("")
 
+    # TODO: analyze relevant doc descriptions
+    #       query expansion (Rocchio's alrgorithm)
+
 if __name__ == "__main__":
     main()
     # test
