@@ -128,7 +128,7 @@ def main():
     doc = doc_freq(freq_list)
     scores = tf_idf(freq_list, doc, len(results))
     q1, q2 = get_query(scores)
-
+    print(q1 + " " + q2)
 
 
 if __name__ == "__main__":
