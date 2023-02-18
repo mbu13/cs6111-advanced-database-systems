@@ -43,14 +43,15 @@ def get_relevant_docs(output):
         
     return precision/10, relevant
 
-def word_frequency(doc_set):
+def word_frequency(doc_set, stop):
     tf_list = list({} for i in range(len(doc_set)))
     for i, result in enumerate(doc_set):
         sent = result['description'].lower().split()
         for word in sent:
-            if word not in tf_list[i]:
-                tf_list[i][word] = 0
-            tf_list[i][word] += 1
+            if word not in stop:
+                if word not in tf_list[i]:
+                    tf_list[i][word] = 0
+                tf_list[i][word] += 1
     return tf_list
 
 def doc_freq(tf_list):
@@ -79,7 +80,8 @@ def main():
     GOOGLE_ENGINE_ID = sys.argv[2]
     PRECISION = float(sys.argv[3])
     WORDS = sys.argv[4:]
-
+    f = open('stop.txt', 'r')
+    stop = f.read()
     # Make search API call
     items = get_google_search_items(GOOGLE_API_KEY, GOOGLE_ENGINE_ID, WORDS)
     
@@ -108,7 +110,7 @@ def main():
         exit("")
     
     # get the word frequency for each document
-    tf_list = word_frequency(output) # list of dicts
+    tf_list = word_frequency(output, stop) # list of dicts
     # get the document frequency for each word
     df = doc_freq(tf_list) # dict
     print(tf_list)
