@@ -82,6 +82,7 @@ def main():
 
     # Make search API call
     items = get_google_search_items(GOOGLE_API_KEY, GOOGLE_ENGINE_ID, WORDS)
+    
     # Format items to desired output
     output = get_formatted_items(items)
     if len(output) < 10:
