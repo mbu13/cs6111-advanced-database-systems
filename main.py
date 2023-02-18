@@ -33,7 +33,7 @@ def get_formatted_items(items):
 def get_html_bodies(output):
     for doc in output:
         link = doc['url']
-        htmlfile = urllib.urlopen(link).read()
+        htmlfile = urllib.request.urlopen(link).read()
         soup = bs4.BeautifulSoup(htmlfile).find('body')
     return soup
 
