@@ -91,7 +91,10 @@ def main():
             "\nQuery returned less than 10 results, done")
         exit("")
 
+    # prompt user for relevance feedback
     precision, relevant = get_relevant_docs(output)
+
+    # check if first ten documents are good enough
     if precision >= PRECISION:
         print("======================\n"
             + "Query: " + str(WORDS) + "\nPrecision: " + str(precision) + 
@@ -103,14 +106,14 @@ def main():
             + "Query: " + str(WORDS) + "\nPrecision: " + str(precision) + 
             "\nPrecision = 0, Done")
         exit("")
-
-    # TODO: analyze relevant doc descriptions
-    #       query expansion (Rocchio's alrgorithm)
-    tf_list = word_frequency(output)
-    df = doc_freq(tf_list)
+    
+    # get the word frequency for each document
+    tf_list = word_frequency(output) # list of dicts
+    # get the document frequency for each word
+    df = doc_freq(tf_list) # dict
     print(tf_list)
     print(df)
-
+    
 
 if __name__ == "__main__":
     main()
