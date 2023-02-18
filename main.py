@@ -45,7 +45,8 @@ def get_relevant_docs(output):
 def tf_idf(relevant):
     scores = {}
     for result in relevant:
-        for word in result["description"]:
+        sent = result.split()
+        for word in sent:
             if word not in scores:
                 scores[word] = 0
             scores[word] += 1
