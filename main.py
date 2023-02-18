@@ -22,7 +22,8 @@ def get_google_search_items(api_key, engine_id, words):
 
     # Get top ten items
     items = res['items'][:MAX_ITEMS]
-    return items
+    results = res['items'][:100]
+    return items, results
 
 def get_formatted_items(items):
     def get_attr(item):
@@ -70,6 +71,22 @@ def tf_idf(freq, doc, N):
 
     return score_list
 
+def get_query(scores):
+    queries = {}
+    for i, score in enumerate(scores):
+        tempkey = max(score, key=score.get)
+        tempval = max(score.values())
+        if tempkey not in queries:
+            queries[tempkey] = tempval
+        else:
+            if tempval > queries[tempkey]:
+                queries[tempkey] = tempval
+
+    q1 = max(queries, key = queries.get)
+    queries.pop(q1)
+    q2 = max(queries, key = queries.get)
+    return q1, q2
+
 def main():
     if len(sys.argv) < 5:
         print('Required input format: <google api key> <google engine id> <precision> <query>')
@@ -81,10 +98,11 @@ def main():
     WORDS = sys.argv[4:]
 
     # Make search API call
-    items = get_google_search_items(GOOGLE_API_KEY, GOOGLE_ENGINE_ID, WORDS)
+    items, results = get_google_search_items(GOOGLE_API_KEY, GOOGLE_ENGINE_ID, WORDS)
 
     # Format items to desired output
     output = get_formatted_items(items)
+    results = get_formatted_items(results)
     if len(output) < 10:
         print("======================\n"
             + "Query: " + str(WORDS) + 
@@ -106,10 +124,10 @@ def main():
 
     # TODO: analyze relevant doc descriptions
     #       query expansion (Rocchio's alrgorithm)
-    freq_list = word_frequency(relevant)
+    freq_list = word_frequency(results)
     doc = doc_freq(freq_list)
-    scores = tf_idf(freq_list, doc, len(relevant))
-    print(scores)
+    scores = tf_idf(freq_list, doc, len(results))
+    q1, q2 = get_query(scores)
 
 
 
