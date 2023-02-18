@@ -79,7 +79,7 @@ def main():
     # TODO: analyze relevant doc descriptions
     #       query expansion (Rocchio's alrgorithm)
     print(type(relevant[0]))
-    print(relevant[0][2])
+    print(relevant[0]["description"])
 
 if __name__ == "__main__":
     main()
