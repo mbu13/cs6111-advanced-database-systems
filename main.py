@@ -106,7 +106,7 @@ def main():
     #       query expansion (Rocchio's alrgorithm)
     freq = word_frequency(relevant)
     doc = doc_freq(freq)
-    scores = tf_idf(freq, doc, len(relevant))
+    # scores = tf_idf(freq, doc, len(relevant))
     print(freq)
 
 
