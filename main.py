@@ -44,14 +44,14 @@ def get_relevant_docs(output):
     return precision/10, relevant
 
 def word_frequency(relevant):
-    words = {}
-    for result in relevant:
+    doc_list = list({} for i in range(len(relevant)))
+    for i, result in enumerate(relevant):
         sent = result['description'].lower().split()
         for word in sent:
-            if word not in words:
-                words[word] = 0
-            words[word] += 1
-    return words
+            if word not in doc_list[i]:
+                doc_list[i][word] = 0
+            doc_list[i][word] += 1
+    return doc_list
 
 def doc_freq(relevant, freq):
     doc = {}
@@ -109,7 +109,7 @@ def main():
     freq = word_frequency(relevant)
     doc = doc_freq(relevant, freq)
     scores = tf_idf(freq, doc, len(relevant))
-    print(doc)
+    print(freq)
 
 
 
