@@ -137,7 +137,10 @@ def main():
     # print(df)
 
     link = output[1]['url']
-    htmlfile = urllib.request.urlopen(link).read()
+    try:
+        htmlfile = urllib.request.urlopen(link).read()
+    except urllib.error.HTTPError as e:
+        print(e.reason)
     soup = bs4.BeautifulSoup(htmlfile, features="html.parser").find('body')
     for script in soup(["script", "style"]):
         script.extract()
