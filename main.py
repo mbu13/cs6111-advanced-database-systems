@@ -101,7 +101,7 @@ def get_maxes(tfidf, query):
     for lis in tfidf:
         k = max(lis, key=lis.get)
         v = max(lis.values())
-        while k not in query:
+        while k in query:
             k = max(lis, key=lis.get)
             v = max(lis.values())
         key.append(k)
@@ -151,7 +151,9 @@ def main():
     # get the document frequency for each word
     df = doc_freq(tf_list) # dict
     # tfidf = tf_idf(tf_list, df, len(tf_list))
-    keys, vals = get_maxes(tf_list, str(WORDS).split())
+    keys, vals = get_maxes(tf_list, str(WORDS))
+    print(keys)
+    print(vals)
     
 
 if __name__ == "__main__":
