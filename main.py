@@ -111,7 +111,8 @@ def get_maxes(tfidf, query,df):
                     break
 
     sort = sorted(keys, key=lambda tup: tup[2])
-    return sort.reverse()
+    sort.reverse()
+    return sort
 
 def main():
     if len(sys.argv) < 5:
