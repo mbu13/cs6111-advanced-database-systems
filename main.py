@@ -105,11 +105,11 @@ def get_maxes(tfidf, query):
             k = str(tup[0])
             print(k)
             break
-            v = tup[1]
-            if key not in query:
-                key.append(k)
-                score.append(v)
-                break
+            # v = tup[1]
+            # if key not in query:
+            #     key.append(k)
+            #     score.append(v)
+            #     break
 
     return key, score
 
