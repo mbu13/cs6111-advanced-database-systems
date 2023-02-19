@@ -57,7 +57,7 @@ def main():
     link = output[0]['url']
     htmlfile = urllib.request.urlopen(link).read()
     soup = bs4.BeautifulSoup(htmlfile, features="html.parser").find('body')
-    print(bodies)
+    print(soup)
 
 if __name__ == "__main__":
     main()
