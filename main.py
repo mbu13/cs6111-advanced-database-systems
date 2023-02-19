@@ -50,7 +50,7 @@ def get_relevant_docs(output):
 
 def word_frequency(text, stop):
     tflist = {}
-    doc = text.lower().split(" ")
+    doc = text.lower().split("\n")
     for word in doc:
         if word not in stop:
             if word not in tflist:
