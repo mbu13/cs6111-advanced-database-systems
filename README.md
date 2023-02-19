@@ -1,15 +1,10 @@
-# cs6111-advanced-database-systems
-Spring 2023
-
-
-
 # CS6111: Project 1
 ## Names and UNIs
 Ryan Grossmann
-rg3398
+(rg3398)
 
 Matthew Bu
-mb4753
+(mb4753)
 
 ## Keys
   * Search ID: fb8c9f64780d3213f
