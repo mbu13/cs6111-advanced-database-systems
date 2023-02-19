@@ -105,7 +105,7 @@ def get_maxes(tfidf, query,df):
             k = str(tup[0])
             v = tup[1]
             if k not in query:
-                keys.append(tuple(k,v, df[k]))
+                keys.append(tuple((k,v, df[k])))
                 count += 1
                 if count > 4:
                     break
