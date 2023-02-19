@@ -56,6 +56,10 @@ def word_frequency(text, stop):
             if word not in tflist:
                 tflist[word] = 0
             tflist[word] += 1
+
+    for key in tflist:
+        if tflist[key] == 1:
+            tflist.pop(key)
     return tflist
 
 def doc_freq(tf_list):
@@ -147,8 +151,7 @@ def main():
     chunks = (phrase.strip() for line in lines for phrase in line.split(" "))
     text = '\n'.join(chunk for chunk in chunks if chunk)
     tf = word_frequency(text, stop)
-    print(max(tf, key=tf.get))
-    print(max(tf.values()))
+    print(tf)
     
 
 if __name__ == "__main__":
