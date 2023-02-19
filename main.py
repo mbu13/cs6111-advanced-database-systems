@@ -131,11 +131,23 @@ def main():
         exit("")
     
     # get the word frequency for each document
-    tf_list = get_website(relevant, stop) # list of dicts
+    # tf_list = get_website(relevant, stop) # list of dicts
     # get the document frequency for each word
-    df = doc_freq(tf_list) # dict
-    print(df)
+    # df = doc_freq(tf_list) # dict
+    # print(df)
 
+    link = relevant[0]['url']
+    htmlfile = urllib.request.urlopen(link).read()
+    soup = bs4.BeautifulSoup(htmlfile, features="html.parser").find('body')
+    for script in soup(["script", "style"]):
+        script.extract()
+
+    text = soup.get_text()
+    lines = (line.strip() for line in text.splitlines())
+    chunks = (phrase.strip() for line in lines for phrase in line.split(" "))
+    text = '\n'.join(chunk for chunk in chunks if chunk)
+    tf = word_frequency(text, stop)
+    print(tf)
     
 
 if __name__ == "__main__":
