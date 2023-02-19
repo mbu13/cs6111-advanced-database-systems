@@ -28,11 +28,11 @@ Matthew Bu
 
 ## Internal Design
   * Libraries:
-      * sys - for getting the program's input parameters (api key, engine id, precision, query)
-      * json - for displaying the webpage summaries during relevance feedback
-      * math - for math operations
-      * urllib.request - for opening urls
-      * bs4 - for parsing the webpages
+      * `sys` - for getting the program's input parameters (api key, engine id, precision, query)
+      * `json` - for displaying the webpage summaries during relevance feedback
+      * `math` - for math operations
+      * `urllib.request` - for opening urls
+      * `bs4` - for parsing the webpages
    * Functions:
       * `def get_google_search_items(api_key, engine_id, words):` - for searching Google and returning a list of webpages
       * `def get_formatted_items(items):` - for formatting the webpage summaries
