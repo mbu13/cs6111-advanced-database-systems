@@ -136,7 +136,7 @@ def main():
     # df = doc_freq(tf_list) # dict
     # print(df)
 
-    link = relevant[0]['url']
+    link = relevant[1]['url']
     htmlfile = urllib.request.urlopen(link).read()
     soup = bs4.BeautifulSoup(htmlfile, features="html.parser").find('body')
     for script in soup(["script", "style"]):
