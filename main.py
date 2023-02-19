@@ -122,6 +122,7 @@ def tf_idf(tf_list, df, N):
 def get_website(output, stop):
     # initialize return variable
     tf_list = []
+    text_list = []
 
     # for each webpage
     for i, doc in enumerate(output):
@@ -145,7 +146,9 @@ def get_website(output, stop):
         tf = word_frequency(text, stop)
         # add term frequency dictionary to list
         tf_list.append(tf)
-    return tf_list
+        text = text.lower().split("\n")
+        text_list.append(text)
+    return tf_list, text_list
 
 """
     Function to get the best new querying terms
@@ -225,7 +228,7 @@ def main():
         exit("")
     
     # get the word frequency for each document
-    tf_list = get_website(relevant, stop) # list of dicts
+    tf_list, text_list = get_website(relevant, stop) # list of dicts
     # check if none of the webpages could be analyzed
     if len(tf_list) == 0:
         print("======================\n"
@@ -240,7 +243,7 @@ def main():
 
     # get sorted list of potential words to query on (sorted based on df)
     keys = get_maxes(tf_list, str(WORDS).lower(), df) # list of tuple(word, tf, df)
-    print(keys)
+    print(df)
     
     
 
