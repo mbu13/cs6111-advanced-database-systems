@@ -110,7 +110,8 @@ def get_maxes(tfidf, query,df):
                 if count > 4:
                     break
 
-    return sorted(keys, key=lambda tup: tup[2])
+    sort = sorted(keys, key=lambda tup: tup[2])
+    return sort.reverse()
 
 def main():
     if len(sys.argv) < 5:
