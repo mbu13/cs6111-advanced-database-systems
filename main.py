@@ -101,10 +101,12 @@ def get_maxes(tfidf, query):
     for lis in tfidf:
         lis = sorted(lis.items(), key=lambda kv: (kv[1], kv[0]))
         lis.reverse()
-        for key in lis:
+        for tup in lis:
+            k = tup[0]
+            v = tup[1]
             if key not in query:
-                key.append(key)
-                score.append(lis[key])
+                key.append(k)
+                score.append(v)
                 break
 
     return key, score
