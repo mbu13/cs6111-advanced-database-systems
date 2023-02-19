@@ -99,7 +99,8 @@ def get_maxes(tfidf, query):
     key = []
     score = []
     for lis in tfidf:
-        lis = sorted(lis.values())
+        lis = sorted(lis.items(), key=lambda kv: (kv[1], kv[0]))
+        lis.reverse()
         for key in lis:
             if key not in query:
                 key.append(key)
@@ -154,6 +155,7 @@ def main():
     keys, vals = get_maxes(tf_list, str(WORDS).lower())
     print(keys)
     print(vals)
+
     
 
 if __name__ == "__main__":
