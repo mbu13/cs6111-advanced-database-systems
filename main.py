@@ -56,11 +56,11 @@ def word_frequency(text, stop):
             if word not in tflist:
                 tflist[word] = 0
             tflist[word] += 1
-
+    t_list = tflist
     for key in tflist:
         if tflist[key] == 1:
-            tflist.pop(key)
-    return tflist
+            t_list.pop(key)
+    return t_list
 
 def doc_freq(tf_list):
     df = {}
