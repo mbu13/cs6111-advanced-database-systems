@@ -95,12 +95,17 @@ def get_website(output, stop):
         tf_list.append(tf)
     return tf_list
 
-def get_maxes(tfidf):
+def get_maxes(tfidf, query):
     key = []
     score = []
     for lis in tfidf:
-        key.append(max(lis, key=lis.get))
-        score.append(max(lis.values()))
+        k = max(lis, key=lis.get)
+        v = max(lis.values())
+        while k not in query:
+            k = max(lis, key=lis.get)
+            v = max(lis.values())
+        key.append(k)
+        score.append(v)
     return key, score
 
 def main():
@@ -146,7 +151,7 @@ def main():
     # get the document frequency for each word
     df = doc_freq(tf_list) # dict
     # tfidf = tf_idf(tf_list, df, len(tf_list))
-    keys, vals = get_maxes(tf_list)
+    keys, vals = get_maxes(tf_list, str(WORDS))
     print(keys)
     print(vals)
     
