@@ -54,7 +54,7 @@ def main():
     output = get_formatted_items(items)
 
     # bodies = get_html_bodies(output)
-    print(output[0]['url'])
+    print(type(output[0]['url']))
     # print(bodies)
 
 if __name__ == "__main__":
