@@ -53,7 +53,7 @@ def main():
     # Format items to desired output
     output = get_formatted_items(items)
 
-    bodies = get_html_bodies(output)
+    # bodies = get_html_bodies(output)
     print(output[0]['url'])
     # print(bodies)
 
