@@ -34,7 +34,7 @@ def get_html_bodies(output):
     for doc in output:
         link = doc['url']
         htmlfile = urllib.request.urlopen(link).read()
-        soup = bs4.BeautifulSoup(htmlfile).find('body')
+        soup = bs4.BeautifulSoup(htmlfile, features="html.parser").find('body')
     return soup
 
 def main():
