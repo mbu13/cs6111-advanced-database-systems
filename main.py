@@ -152,7 +152,8 @@ def main():
     df = doc_freq(tf_list) # dict
     # tfidf = tf_idf(tf_list, df, len(tf_list))
     # keys, vals = get_maxes(tf_list, str(WORDS))
-    print(str(WORDS))
+    w = str(WORDS).split()
+    print(w)
     
 
 if __name__ == "__main__":
