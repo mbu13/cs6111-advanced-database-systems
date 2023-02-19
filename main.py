@@ -240,7 +240,7 @@ def main():
 
     # get sorted list of potential words to query on (sorted based on df)
     keys = get_maxes(tf_list, str(WORDS).lower(), df) # list of tuple(word, tf, df)
-    print(df["per"])
+    print(df)
     
     
 
