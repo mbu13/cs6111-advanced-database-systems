@@ -47,16 +47,15 @@ def get_relevant_docs(output):
         
     return precision/10, relevant, nr
 
-def word_frequency(doc_set, stop):
-    tf_list = list({} for i in range(len(doc_set)))
-    for i, result in enumerate(doc_set):
-        sent = result['description'].lower().split()
-        for word in sent:
-            if word not in stop:
-                if word not in tf_list[i]:
-                    tf_list[i][word] = 0
-                tf_list[i][word] += 1
-    return tf_list
+def word_frequency(text, stop):
+    tflist = {}
+    doc = text.lower().split(" ")
+    for word in doc:
+        if word not in stop:
+            if word not in tflist:
+                tflist[word] = 0
+            tflist[word] += 1
+    return tflist
 
 def doc_freq(tf_list):
     df = {}
@@ -74,6 +73,23 @@ def tf_idf(tf_list, df, N):
             score_list[i][key] = (1 + math.log(result[key], 10)) * (math.log(N/df[key],10))
 
     return score_list
+
+def get_website(output, stop):
+    tf_list = []
+    for i, doc in enumerate(output):
+        link = output[0]['url']
+        htmlfile = urllib.request.urlopen(link).read()
+        soup = bs4.BeautifulSoup(htmlfile, features="html.parser").find('body')
+        for script in soup(["script", "style"]):
+            script.extract()
+
+        text = soup.get_text()
+        lines = (line.strip() for line in text.splitlines())
+        chunks = (phrase.strip() for line in lines for phrase in line.split(" "))
+        text = '\n'.join(chunk for chunk in chunks if chunk)
+        tf = word_frequency(text, stop)
+        tf_list[i] = tf
+    return tf_list
 
 def main():
     if len(sys.argv) < 5:
@@ -114,10 +130,9 @@ def main():
         exit("")
     
     # get the word frequency for each document
-    tf_list = word_frequency(output, stop) # list of dicts
+    tf_list = get_website(relevant, stop) # list of dicts
     # get the document frequency for each word
     df = doc_freq(tf_list) # dict
-    print(tf_list)
     print(df)
     
 
