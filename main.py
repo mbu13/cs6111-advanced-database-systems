@@ -157,7 +157,8 @@ def main():
     keys, vals = get_maxes(tf_list, str(WORDS).lower())
     print(keys)
     print(vals)
-
+    for k in keys:
+        print(df[k])
     
 
 if __name__ == "__main__":
