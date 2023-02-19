@@ -151,9 +151,8 @@ def main():
     # get the document frequency for each word
     df = doc_freq(tf_list) # dict
     # tfidf = tf_idf(tf_list, df, len(tf_list))
-    keys, vals = get_maxes(tf_list, str(WORDS))
-    print(keys)
-    print(vals)
+    # keys, vals = get_maxes(tf_list, str(WORDS))
+    print(str(WORDS))
     
 
 if __name__ == "__main__":
