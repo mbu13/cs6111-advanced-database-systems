@@ -136,7 +136,7 @@ def main():
     # df = doc_freq(tf_list) # dict
     # print(df)
 
-    link = output[7]['url']
+    link = output[8]['url']
     try:
         htmlfile = urllib.request.urlopen(link).read()
     except urllib.error.HTTPError as e:
