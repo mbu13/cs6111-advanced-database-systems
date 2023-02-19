@@ -99,13 +99,13 @@ def get_maxes(tfidf, query):
     key = []
     score = []
     for lis in tfidf:
-        k = max(lis, key=lis.get)
-        v = max(lis.values())
-        while k in query:
-            k = max(lis, key=lis.get)
-            v = max(lis.values())
-        key.append(k)
-        score.append(v)
+        lis = sorted(lis.values())
+        for key in lis:
+            if key not in query:
+                key.append(key)
+                score.append(lis[key])
+                break
+
     return key, score
 
 def main():
