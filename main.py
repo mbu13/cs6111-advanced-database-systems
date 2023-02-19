@@ -145,7 +145,7 @@ def main():
     tf_list = get_website(relevant, stop) # list of dicts
     # get the document frequency for each word
     df = doc_freq(tf_list) # dict
-    tfidf = tf_idf(tf_list, df, len(tf_list))
+    # tfidf = tf_idf(tf_list, df, len(tf_list))
     keys, vals = get_maxes(tf_list)
     print(keys)
     print(vals)
