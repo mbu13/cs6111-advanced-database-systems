@@ -103,6 +103,8 @@ def get_maxes(tfidf, query):
         lis.reverse()
         for tup in lis:
             k = str(tup[0])
+            print(k)
+            break
             v = tup[1]
             if key not in query:
                 key.append(k)
