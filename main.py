@@ -95,6 +95,14 @@ def get_website(output, stop):
         tf_list.append(tf)
     return tf_list
 
+def get_maxes(tfidf):
+    key = []
+    score = []
+    for lis in tfidf:
+        key.append(max(lis, key=lis.get))
+        score.append(max(lis.values()))
+    return key, score
+
 def main():
     if len(sys.argv) < 5:
         print('Required input format: <google api key> <google engine id> <precision> <query>')
@@ -137,23 +145,10 @@ def main():
     tf_list = get_website(relevant, stop) # list of dicts
     # get the document frequency for each word
     df = doc_freq(tf_list) # dict
-    # print(df)
-
-    # link = output[8]['url']
-    # try:
-    #     htmlfile = urllib.request.urlopen(link).read()
-    # except urllib.error.HTTPError as e:
-    #     print(e.reason)
-    # soup = bs4.BeautifulSoup(htmlfile, features="html.parser").find('body')
-    # for script in soup(["script", "style"]):
-    #     script.extract()
-
-    # text = soup.get_text()
-    # lines = (line.strip() for line in text.splitlines())
-    # chunks = (phrase.strip() for line in lines for phrase in line.split(" "))
-    # text = '\n'.join(chunk for chunk in chunks if chunk)
-    # tf = word_frequency(text, stop)
-    print(df)
+    tfidf = tf_idf(tf_list, df, len(tf_list))
+    keys, vals = get_maxes(tfidf)
+    print(keys)
+    print(vals)
     
 
 if __name__ == "__main__":
