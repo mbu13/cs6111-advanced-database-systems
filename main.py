@@ -141,15 +141,20 @@ def get_website(output):
             if CACHE.get(link):
                 htmlfile = CACHE[link]
             else:
-                htmlfile = urllib.request.urlopen(link).read()
+                r = urllib.request.urlopen(link)
+                htmlfile = r.read()
                 CACHE[link] = htmlfile
         except urllib.error.HTTPError as e:
             continue
+
         # parse the webpage for the body
         soup = bs4.BeautifulSoup(htmlfile, "html.parser")
         for script in soup(["script", "style"]):
             script.decompose()
         text = ' '.join(soup.stripped_strings).lower().split(' ')
+
+        if not text:
+            continue
 
         # calculate term frequecies of the webpage body
         tf = word_frequency(text, stop)
@@ -157,7 +162,6 @@ def get_website(output):
         tf_list.append(tf)
         text_list.append(text)
 
-    print("TEXT: ", len(text_list), "\n")
     return tf_list, text_list
 
 """
@@ -202,7 +206,9 @@ def get_maxes(tfidf, query, df):
 
 
 """
-    Caclulate the similarity between two vectors
+    NOTE: Leaving this block commented because we attempted various
+    methods of computing similarity (e.g. cosine of vectors). We ended up finding
+    a more accurate solution and went with an alternate approach
 """
 '''
 def get_similarity_score(v1, v2):
@@ -211,12 +217,7 @@ def get_similarity_score(v1, v2):
     v2_norm = np.linalg.norm(v2)
 
     return dot / (v1_norm * v2_norm)
-'''
-"""
-    Gets the relevant documents sorted by decreasing order of cosine
-    of the document vector to the query vector
-"""
-'''
+
 def get_ranked_documents(query, relevant, df):
     query_vector = np.array([])
     for word in query:
@@ -270,9 +271,6 @@ def get_proximities(keys, query, docs):
                             min_dist = abs(j - i)
                         else:
                             min_dist = min(min_dist, abs(j - i))
-
-        if min_dist == sys.maxsize:
-            print('ERROR ', doc)
 
         return min_dist
 
@@ -351,14 +349,16 @@ def main():
 
         # get sorted list of potential words to query on (sorted based on df)
         keys = get_maxes(tf_list, str(words).lower(), df) # list of tuple(word, tf, df)
-        k = []
+
+        # Remove any keys that only appear in one doc
+        filtered_keys = []
         if len(tf_list) > 1:
             for i in keys:
                 if i[2] != 1:
-                    k.append(i)
+                    filtered_keys.append(i)
 
         # get top words to append to query
-        prox = get_proximities(k, words, text_list)
+        prox = get_proximities(filtered_keys, words, text_list)
 
         return prox[0:TOP_N_CLOSEST], precision
 
@@ -370,7 +370,6 @@ def main():
 
         augment, precision = run_query(query)
         if not augment:
-            print("ERROR: Nothing to augment")
             return
         
         print("======================\nFEEDBACK SUMMARY\nQuery {}\nPrecision {}\nStill below the desired precision of {}\nAugmenting by  {}".format(" ".join(query), precision, PRECISION, " ".join(augment)))
@@ -380,4 +379,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    # test
