@@ -206,7 +206,9 @@ def get_maxes(tfidf, query, df):
 
 
 """
-    Caclulate the similarity between two vectors
+    NOTE: Leaving this block commented because we attempted various
+    methods of computing similarity (e.g. cosine of vectors). We ended up finding
+    a more accurate solution and went with an alternate approach
 """
 '''
 def get_similarity_score(v1, v2):
@@ -215,12 +217,7 @@ def get_similarity_score(v1, v2):
     v2_norm = np.linalg.norm(v2)
 
     return dot / (v1_norm * v2_norm)
-'''
-"""
-    Gets the relevant documents sorted by decreasing order of cosine
-    of the document vector to the query vector
-"""
-'''
+
 def get_ranked_documents(query, relevant, df):
     query_vector = np.array([])
     for word in query:
