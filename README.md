@@ -54,5 +54,8 @@ Matthew Bu
   * We add the top 2 words to the query in the typical position that they are found
 
 ## Additional Information
+  * HTML Handling
+       * If a website is unable to be read because it is not HTML or we are denied from entering the website, we still count it in our precision calculation.
+       * However, if all websites marked relevant are not able to be parsed because of the reasons listed above, we exit the program. 
   * website parsing code was copied from stackoverflow
       * https://stackoverflow.com/questions/328356/extracting-text-from-html-file-using-python
