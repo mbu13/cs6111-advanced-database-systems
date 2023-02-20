@@ -77,9 +77,8 @@ def word_frequency(text, stop):
                 tflist[word] = 0
             tflist[word] += 1
 
-    s = sum(tflist.values())
     for word in tflist:
-        tflist[word] = tflist[word]/ s
+        tflist[word] = 1 + math.log(tflist[word], 2)
     return tflist
 
 
