@@ -244,7 +244,13 @@ def main():
 
     # get sorted list of potential words to query on (sorted based on df)
     keys = get_maxes(tf_list, str(WORDS).lower(), df) # list of tuple(word, tf, df)
-    print(keys)
+    k = []
+    if len(tf_list) > 1:
+        for i in keys:
+            if i[2] != 1:
+                k.append(i)
+                
+    print(k)
     
     
 
