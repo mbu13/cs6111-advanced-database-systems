@@ -135,7 +135,7 @@ def get_website(output, stop):
         except urllib.error.HTTPError as e:
             continue
         # parse the webpage for the body
-        soup = bs4.BeautifulSoup(htmlfile, features="html.parser").find('body')
+        soup = bs4.BeautifulSoup(htmlfile, features="html.parser")
         for script in soup(["script", "style"]):
             script.extract()
         text = soup.get_text()
