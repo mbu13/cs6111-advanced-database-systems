@@ -149,7 +149,10 @@ def get_website(output):
         except urllib.error.HTTPError as e:
             continue
         # parse the webpage for the body
+        print(doc['title'])
+        htmlfile = urllib.request.urlopen(link).read()
         soup = bs4.BeautifulSoup(htmlfile, features="html.parser").get_text()
+        print(soup)
         for script in soup(["script", "style"]):
             script.extract()
         text = soup.get_text()
