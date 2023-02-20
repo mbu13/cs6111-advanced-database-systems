@@ -1,0 +1,451 @@
+python3 main.py AIzaSyBh546gYpsBnKcTEdBi-jagSb9gEIoRj6s fb8c9f64780d3213f 0.9 "per se"
+
+
+Parameters:
+Client key  = AIzaSyBh546gYpsBnKcTEdBi-jagSb9gEIoRj6s
+Engine key  = fb8c9f64780d3213f
+Query       = per se
+Precision   = 0.9
+Google Search Results:
+======================
+
+{
+    "title": "Per Se | Thomas Keller Restaurant Group",
+    "url": "https://www.thomaskeller.com/perseny",
+    "description": "Per Se. Per Se Front Door. center. About. About; Restaurant \u00b7 Team \u00b7 Info & Directions \u00b7 Gift Experiences \u00b7 Reservations; Menus & Stories. Menus & Stories"
+}
+Relevant (Y/N)? Y
+{
+    "title": "per se - Wiktionary",
+    "url": "https://en.wiktionary.org/wiki/per_se",
+    "description": "In and of itself; by itself; without determination by or involvement of extraneous factors; as such quotations \u25bdsynonym \u25b3 \u00b7 (philosophy) Being a thing that\u00a0..."
+}
+Relevant (Y/N)? N
+{
+    "title": "Per Se - New York, NY | Tock",
+    "url": "https://www.exploretock.com/perse",
+    "description": "Opened in 2004, Per Se is Thomas Keller's acclaimed interpretation of The French Laundry in the Deutsche Bank Center at Columbus Circle."
+}
+Relevant (Y/N)? Y
+{
+    "title": "Per Se (@perseny) \u2022 Instagram photos and videos",
+    "url": "https://www.instagram.com/perseny/?hl=en",
+    "description": "Chef Thomas Keller's 3-Star Michelin restaurant overlooking Columbus Circle & Central Park located in New York City. exploretock.com/perse. 882 posts."
+}
+Relevant (Y/N)? Y
+{
+    "title": "PER SE - 7270 Photos & 1824 Reviews - Food near New York, NY ...",
+    "url": "https://www.yelp.com/biz/per-se-new-york",
+    "description": "1824 reviews of Per Se \"This is Thomas Keller's new resturant in New York. A must if you can get a reservation.\""
+}
+Relevant (Y/N)? Y
+{
+    "title": "Perse Definition & Meaning - Merriam-Webster",
+    "url": "https://www.merriam-webster.com/dictionary/perse",
+    "description": "adjective (1) \u00b7 \u02c8p\u0259rs \u00b7 of a dark grayish blue resembling indigo ; adverb. (\u02cc)p\u0259r-\u02c8s\u0101,. also per-\u02c8s\u0101,. or. (\u02cc)p\u0259r-\u02c8s\u0113 \u00b7 by, of, or in itself or oneself or\u00a0..."
+}
+Relevant (Y/N)? N
+{
+    "title": "Per Se \u2013 New York - a MICHELIN Guide Restaurant",
+    "url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/per-se",
+    "description": "Per Se \u2013 a Three MICHELIN Stars: Exceptional cuisine, worth a special journey! restaurant in the 2022 MICHELIN Guide USA. The MICHELIN inspectors' point of\u00a0..."
+}
+Relevant (Y/N)? Y
+{
+    "title": "PER SE | English meaning - Cambridge Dictionary",
+    "url": "https://dictionary.cambridge.org/dictionary/english/per-se",
+    "description": "5 days ago ... per se definition: 1. by or of itself: 2. by or of itself: 3. by or of itself: . Learn more."
+}
+Relevant (Y/N)? N
+{
+    "title": "Per Se Group",
+    "url": "https://www.persegroup.com/",
+    "description": "Per S\u00e9 is a leading workforce solution to the Energy and Industrial markets. Our technology, and recruitment expertise, seamlessly match talented people in\u00a0..."
+}
+Relevant (Y/N)? N
+{
+    "title": "Per se - Definition, Meaning & Synonyms | Vocabulary.com",
+    "url": "https://www.vocabulary.com/dictionary/per%20se",
+    "description": "Per se is the phrase to use when you want to refer to a particular thing on its own. It is not this Latin phrase, per se, that is important, but rather the\u00a0..."
+}
+Relevant (Y/N)? N
+======================
+FEEDBACK SUMMARY
+Query per se
+Precision 0.5
+Still below the desired precision of 0.9
+Augmenting by  york keller
+Parameters:
+Client key  = AIzaSyBh546gYpsBnKcTEdBi-jagSb9gEIoRj6s
+Engine key  = fb8c9f64780d3213f
+Query       = per se york keller
+Precision   = 0.9
+Google Search Results:
+======================
+
+{
+    "title": "Per Se | Thomas Keller Restaurant Group",
+    "url": "https://www.thomaskeller.com/perseny",
+    "description": "Yountville; The French Laundry \u00b7 Bouchon Bistro \u00b7 Bouchon Bakery \u00b7 Ad Hoc + Addendum \u00b7 Regiis Ova Caviar & Champagne \u00b7 La Calenda; New York; Per Se"
+}
+Relevant (Y/N)? Y
+{
+    "title": "At Thomas Keller's Per Se, Slips and Stumbles - The New York Times",
+    "url": "https://www.nytimes.com/2016/01/13/dining/pete-wells-per-se-review.html",
+    "description": "Jan 12, 2016 ... Keller is still trotting them out. The name Per Se, after all, was chosen to suggest that New York would not simply reflect California's glory;\u00a0..."
+}
+Relevant (Y/N)? Y
+{
+    "title": "Opened in 2004, Per Se is Thomas Keller's acclaimed New York ...",
+    "url": "https://www.thomaskeller.com/new-york-new-york/per-se/restaurant",
+    "description": "Restaurant Opened in 2004, Per Se is Thomas Keller's acclaimed New York interpretation of The French Laundry in the Deutsche Bank Center at Columbus Circle."
+}
+Relevant (Y/N)? Y
+{
+    "title": "Per Se (restaurant) - Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Per_Se_(restaurant)",
+    "description": "Per Se is a New American and French restaurant located at The Shops at Columbus Circle, ... Columbus Circle in Manhattan, New York City, owned by chef Thomas Keller."
+}
+Relevant (Y/N)? Y
+{
+    "title": "Per Se \u2013 New York - a MICHELIN Guide Restaurant",
+    "url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/per-se",
+    "description": "Three MICHELIN Stars: Exceptional cuisine, worth a special journey! An experience at Thomas Keller's Per Se is one to be savored, recounted and remembered."
+}
+Relevant (Y/N)? Y
+{
+    "title": "Thomas Keller Responds to New York Times Review of Per Se ...",
+    "url": "https://www.townandcountrymag.com/leisure/arts-and-culture/a7685/thomas-keller-per-se-new-york-times-review/",
+    "description": "Sep 8, 2016 ... Can Thomas Keller Turn Around Per Se? The country's leading chef responds to that devastating New York Times review and talks about the\u00a0..."
+}
+Relevant (Y/N)? Y
+{
+    "title": "Per Se (@perseny) \u2022 Instagram photos and videos",
+    "url": "https://www.instagram.com/perseny/?hl=en",
+    "description": "Chef Thomas Keller's 3-Star Michelin restaurant overlooking Columbus Circle & Central Park located in New York City. exploretock.com/perse. 882 posts."
+}
+Relevant (Y/N)? Y
+{
+    "title": "Manhattan Restaurant Per Se from Thomas Keller May Finally Be a ...",
+    "url": "https://ny.eater.com/2019/7/24/20706200/per-se-thomas-keller-corey-chow-nyc-restaurants",
+    "description": "Jul 24, 2019 ... New York being the financial capital of the U.S., there is no shortage of wealthy diners to populate the once-iconic Columbus Circle\u00a0..."
+}
+Relevant (Y/N)? Y
+{
+    "title": "Thomas Keller on Per Se Health Rating",
+    "url": "https://www.businessinsider.com/thomas-keller-on-per-se-health-rating-2014-3",
+    "description": "Mar 7, 2014 ... Chef Thomas Keller Responds To The Damning Health Inspection Of His ... Workers in the Per Se kitchen in New York City. muramatsub/Flickr."
+}
+Relevant (Y/N)? Y
+{
+    "title": "Thomas Keller's Per Se - Fire at Per Se - Nymag - New York Magazine",
+    "url": "https://nymag.com/nymetro/food/industry/features/n_10410/",
+    "description": "May 13, 2004 ... How Thomas Keller survived the fire that almost took down Per Se, Manhattan's, um, hottest new restaurant."
+}
+Relevant (Y/N)? Y
+======================
+Query: ['per', 'se', 'york', 'keller']
+Precision: 1.0
+Desired precision reached, done
+
+
+python3 main.py AIzaSyBh546gYpsBnKcTEdBi-jagSb9gEIoRj6s fb8c9f64780d3213f 0.9 "brin"
+
+
+Parameters:
+Client key  = AIzaSyBh546gYpsBnKcTEdBi-jagSb9gEIoRj6s
+Engine key  = fb8c9f64780d3213f
+Query       = brin
+Precision   = 0.9
+Google Search Results:
+======================
+
+{
+    "title": "Sergey Brin - Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Sergey_Brin",
+    "description": "Sergey Mikhailovich Brin is an American business magnate, computer scientist, and internet entrepreneur, who co-founded Google with Larry Page. Brin was the\u00a0..."
+}
+Relevant (Y/N)? Y
+{
+    "title": "worlds of David Brin",
+    "url": "https://www.davidbrin.com/",
+    "description": "David Brin is best-known for shining light \u2014 plausibly and entertainingly \u2014 on technology, society, and countless challenges confronting our rambunctious\u00a0..."
+}
+Relevant (Y/N)? N
+{
+    "title": "Brin Glass Company: Home",
+    "url": "https://www.bringlass.com/",
+    "description": "Brin's glasswork shines in these Corporate, Healthcare, Education, Hospitality, Residential, Nonprofit, Government, and Retail projects."
+}
+Relevant (Y/N)? N
+{
+    "title": "Documentation: 15: 71.1. Introduction - PostgreSQL",
+    "url": "https://www.postgresql.org/docs/current/brin-intro.html",
+    "description": "BRIN stands for Block Range Index. BRIN is designed for handling very large tables in which certain columns have some natural correlation with their\u00a0..."
+}
+Relevant (Y/N)? N
+{
+    "title": "Brin & Brin LLC \u2013 Law Firm",
+    "url": "https://www.brinandbrin.com/",
+    "description": "The litigation, transactional and compliance lawyers at Brin & Brin have proven success in some of the toughest Texas venues. ... We have represented clients in a\u00a0..."
+}
+Relevant (Y/N)? N
+{
+    "title": "brin - Wiktionary",
+    "url": "https://en.wiktionary.org/wiki/brin",
+    "description": "NounEdit \u00b7 One of the radiating sticks of a fan. The outermost are larger and longer, and are called panaches. \u00b7 A single silkworm thread extruded from the gland,\u00a0..."
+}
+Relevant (Y/N)? N
+{
+    "title": "Google Calls In Larry Page and Sergey Brin to Tackle ChatGPT and ...",
+    "url": "https://www.nytimes.com/2023/01/20/technology/google-chatgpt-artificial-intelligence.html",
+    "description": "Jan 20, 2023 ... Last month, Larry Page and Sergey Brin, Google's founders, held several meetings with company executives. The topic: a rival's new chatbot,\u00a0..."
+}
+Relevant (Y/N)? Y
+{
+    "title": "Sergey Brin",
+    "url": "https://www.forbes.com/profile/sergey-brin/",
+    "description": "7 Sergey Brin on the 2022 Forbes 400 - Sergey Brin stepped down as president of Alphabet, parent company of Google, in December 2019 but remains a\u00a0..."
+}
+Relevant (Y/N)? Y
+{
+    "title": "Brin Levinson",
+    "url": "https://www.brinlevinson.com/",
+    "description": "The Art of Brin Levinson."
+}
+Relevant (Y/N)? N
+{
+    "title": "Homescreen Glow | brin",
+    "url": "https://brinsound.bandcamp.com/album/homescreen-glow",
+    "description": "Brin is a strand of rhythmic audio expressionism for the online world through the lens of LA-based artist Colin Blanton. Homescreen Glow, the full-length\u00a0..."
+}
+Relevant (Y/N)? N
+======================
+FEEDBACK SUMMARY
+Query brin
+Precision 0.3
+Still below the desired precision of 0.9
+Augmenting by  sergey cofounder
+Parameters:
+Client key  = AIzaSyBh546gYpsBnKcTEdBi-jagSb9gEIoRj6s
+Engine key  = fb8c9f64780d3213f
+Query       = brin sergey cofounder
+Precision   = 0.9
+Google Search Results:
+======================
+
+{
+    "title": "Sergey Brin - Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Sergey_Brin",
+    "description": "Sergey Mikhailovich Brin is an American business magnate, computer scientist, and internet entrepreneur, who co-founded Google with Larry Page. Brin was the\u00a0..."
+}
+Relevant (Y/N)? Y
+{
+    "title": "Back At Google Again, Cofounder Sergey Brin Just Filed His First ...",
+    "url": "https://www.forbes.com/sites/richardnieva/2023/01/31/sergey-brin-code-request-lamda/",
+    "description": "Feb 1, 2023 ... As the battle in artificial intelligence technology heats up between Silicon Valley companies, Google cofounder Sergey Brin is getting\u00a0..."
+}
+Relevant (Y/N)? Y
+{
+    "title": "Elon Musk denies affair with Google co-founder Sergey Brin's wife ...",
+    "url": "https://www.bbc.com/news/business-62288139",
+    "description": "Jul 25, 2022 ... Tesla boss Elon Musk has denied having an affair with Nicole Shanahan, the wife of Google co-founder, Sergey Brin."
+}
+Relevant (Y/N)? Y
+{
+    "title": "Sergey Brin",
+    "url": "https://www.forbes.com/profile/sergey-brin/",
+    "description": "7 Sergey Brin on the 2022 Forbes 400 - Sergey Brin stepped down as president ... He cofounded Google with Larry Page in 1998 after the two met at Stanford\u00a0..."
+}
+Relevant (Y/N)? Y
+{
+    "title": "Google Cofounder Sergey Brin Warns of AI's Dark Side | WIRED",
+    "url": "https://www.wired.com/story/google-cofounder-sergey-brin-warns-of-ais-dark-side/",
+    "description": "Apr 27, 2018 ... Google cofounder Sergey Brin says advances in artificial intelligence bring new questions and responsibilities.Kimberly White/Getty Images\u00a0..."
+}
+Relevant (Y/N)? Y
+{
+    "title": "Sergey Brin: I didn't see AI coming | World Economic Forum",
+    "url": "https://www.weforum.org/agenda/2017/01/google-sergey-brin-i-didn-t-see-ai-coming/",
+    "description": "Jan 19, 2017 ... Sergey Brin, the co-founder of Google and one of the most successful Silicon Valley entrepreneurs, says he did not foresee the artificial\u00a0..."
+}
+Relevant (Y/N)? Y
+{
+    "title": "Elon Musk denies report of an affair with Google co-founder Sergey ...",
+    "url": "https://www.theverge.com/2022/7/24/23276518/elon-musk-sergey-brin-tesla-google-affair-nicole-shanahan",
+    "description": "Jul 24, 2022 ... The Wall Street Journal reports Elon Musk allegedly had an affair with Google co-founder Sergey Brin's wife, Nicole Shanahan."
+}
+Relevant (Y/N)? Y
+{
+    "title": "Google co-founders and Silicon Valley billionaires try to live forever",
+    "url": "https://www.cnbc.com/2017/03/31/google-co-founders-and-silicon-valley-billionaires-try-to-live-forever.html",
+    "description": "Mar 31, 2017 ... One example is Google co-founder Sergey Brin, who emigrated from the former Soviet Union. Getty Images. One hundred and fifty thousand\u00a0..."
+}
+Relevant (Y/N)? Y
+{
+    "title": "Google co-founder Sergey Brin joins protest against immigration ...",
+    "url": "https://www.theverge.com/2017/1/28/14428262/google-sergey-brin",
+    "description": "Jan 28, 2017 ... Sergey Brin, Google co-founder and president of Alphabet, joined protesters at San Francisco International Airport tonight as demonstrators\u00a0..."
+}
+Relevant (Y/N)? Y
+{
+    "title": "Who Is Google Co-Founder Sergey Brin? - Entrepreneur",
+    "url": "https://www.entrepreneur.com/business-news/who-is-google-co-founder-sergey-brin/432244",
+    "description": "Jul 27, 2022 ... Brin is a billionaire, entrepreneur and computer scientist who co-founded Google at the age of 25. Read more about Brin's past, wife,\u00a0..."
+}
+Relevant (Y/N)? Y
+======================
+Query: ['brin', 'sergey', 'cofounder']
+Precision: 1.0
+Desired precision reached, done
+
+
+python3 main.py AIzaSyBh546gYpsBnKcTEdBi-jagSb9gEIoRj6s fb8c9f64780d3213f 0.9 "cases"
+
+
+Parameters:
+Client key  = AIzaSyBh546gYpsBnKcTEdBi-jagSb9gEIoRj6s
+Engine key  = fb8c9f64780d3213f
+Query       = cases
+Precision   = 0.9
+Google Search Results:
+======================
+
+{
+    "title": "CASES: Home",
+    "url": "https://www.cases.org/",
+    "description": "From court and program offices in the Bronx, Brooklyn, and Manhattan, CASES provides community-based alternatives to jail and prison. These programs address\u00a0..."
+}
+Relevant (Y/N)? N
+{
+    "title": "CASETiFY: Show Your Colors",
+    "url": "https://www.casetify.com/",
+    "description": "CASETiFY - We make the most sustainable yet protective phone cases for iPhone 14 / iPhone 14 Pro / iPhone 14 Plus / iPhone 14 Pro Max and tech accessories."
+}
+Relevant (Y/N)? N
+{
+    "title": "CDC COVID Data Tracker: Home",
+    "url": "https://covid.cdc.gov/",
+    "description": "Stay up to date on the most recent data on vaccinations, cases, and deaths. Cases, Deaths, & Testing Case & Death Demographic Trends Vaccination Distribution &\u00a0..."
+}
+Relevant (Y/N)? Y
+{
+    "title": "Coronavirus COVID-19 (2019-nCoV)",
+    "url": "https://www.arcgis.com/apps/dashboards/bda7594740fd40299423467b48e9ecf6",
+    "description": "Total Cases. Data source error. Total Deaths. Data source error. Total Vaccine Doses Administered. Cases | Deaths by Country/Region/Sovereignty."
+}
+Relevant (Y/N)? Y
+{
+    "title": "COVID - Coronavirus Statistics - Worldometer",
+    "url": "https://www.worldometers.info/coronavirus/",
+    "description": "Reported Cases and Deaths by Country or Territory. NOTE: Effective February 1, 2023, the Coronavirus Tracker has switched from LIVE to Daily Updates. As a\u00a0..."
+}
+Relevant (Y/N)? Y
+{
+    "title": "2022 U.S. Map & Case Count | Mpox | Poxvirus | CDC",
+    "url": "https://www.cdc.gov/poxvirus/monkeypox/response/2022/us-map.html",
+    "description": "View a map of 2022 mpox cases in the United States."
+}
+Relevant (Y/N)? N
+{
+    "title": "Cases - Coronavirus",
+    "url": "https://www.vdh.virginia.gov/coronavirus/see-the-numbers/covid-19-in-virginia/covid-19-in-virginia-cases/",
+    "description": "Jan 31, 2023 ... Case, hospitalization, and death data reflect Virginia residents only. Death data are presented by both date of report and by date of death and\u00a0..."
+}
+Relevant (Y/N)? Y
+{
+    "title": "Measles Cases and Outbreaks | CDC",
+    "url": "https://www.cdc.gov/measles/cases-outbreaks.html",
+    "description": "Measles cases in 2019. From January 1 to December 31, 2019, 1,274* individual cases of measles were confirmed in 31 states. This is the greatest number\u00a0..."
+}
+Relevant (Y/N)? N
+{
+    "title": "Case Status and Information",
+    "url": "https://www.vacourts.gov/caseinfo/home.html",
+    "description": "Circuit Court. Circuit Court Case Information Online access to civil and criminal cases in select circuit courts. Cases may be searched by locality using name,\u00a0..."
+}
+Relevant (Y/N)? N
+{
+    "title": "Odd Squad: Cases",
+    "url": "https://pbskids.org/oddsquad/games/cases",
+    "description": "Change your station. Back. Odd Squad Game: Cases. Play Pause Audio On Audio Off Voice Music Sound Effects Closed Captioning Fullscreen Help Close."
+}
+Relevant (Y/N)? N
+======================
+FEEDBACK SUMMARY
+Query cases
+Precision 0.4
+Still below the desired precision of 0.9
+Augmenting by  dashboards covid-19
+Parameters:
+Client key  = AIzaSyBh546gYpsBnKcTEdBi-jagSb9gEIoRj6s
+Engine key  = fb8c9f64780d3213f
+Query       = cases dashboards covid-19
+Precision   = 0.9
+Google Search Results:
+======================
+
+{
+    "title": "Home - ADHS",
+    "url": "https://www.azdhs.gov/covid19/data/index.php",
+    "description": "Rates of COVID-19 by Vaccination Status in Arizona COVID-19 Variant Report The hospital capacity dashboards are being sunset and have been removed from this\u00a0..."
+}
+Relevant (Y/N)? Y
+{
+    "title": "Coronavirus COVID-19 (2019-nCoV)",
+    "url": "https://www.arcgis.com/apps/dashboards/bda7594740fd40299423467b48e9ecf6",
+    "description": "COVID-19 Dashboard. by the Center for Systems Science and Engineering (CSSE) at Johns ... Cases | Deaths by Country/Region/Sovereignty. Data source error."
+}
+Relevant (Y/N)? Y
+{
+    "title": "WHO Coronavirus (COVID-19) Dashboard",
+    "url": "https://covid19.who.int/",
+    "description": "World Health Organization Coronavirus disease situation dashboard presents official daily counts of COVID-19 cases and deaths worldwide,\u00a0..."
+}
+Relevant (Y/N)? Y
+{
+    "title": "Novel Coronavirus (COVID-19): Indiana COVID-19 Home Dashboard",
+    "url": "https://www.coronavirus.in.gov/indiana-covid-19-dashboard-and-map/",
+    "description": "Dec 22, 2022 ... Indiana COVID-19 Home Dashboard ... An unexpected error occurred. If you continue to receive this error please contact your Tableau Server\u00a0..."
+}
+Relevant (Y/N)? Y
+{
+    "title": "COVID-19 Data Dashboard | Washington State Department of Health",
+    "url": "https://doh.wa.gov/emergencies/covid-19/data-dashboard",
+    "description": "Website Last Updated 2:11 PM 2/15/2023. Data shown as of previous day at 11:59 pm PT. Summary Data Tables. Cumulative Cases, Hospitalizations and Deaths by\u00a0..."
+}
+Relevant (Y/N)? Y
+{
+    "title": "COVID-19 Dashboards | AustinTexas.gov",
+    "url": "https://www.austintexas.gov/page/covid-19-dashboards",
+    "description": "COVID-19 Surveillance Dashboard Austin Public Health's Epidemiology and Disease Surveillance program tracks confirmed cases and conducts detailed case\u00a0..."
+}
+Relevant (Y/N)? Y
+{
+    "title": "North Carolina COVID-19 Dashboard | NC COVID-19",
+    "url": "https://covid19.ncdhhs.gov/dashboard",
+    "description": "All COVID-19 Dashboards. Summary; Vaccinations \u00b7 Respiratory Virus Surveillance \u00b7 Cases and Deaths \u00b7 Hospitalizations \u00b7 Outbreaks \u00b7 Wastewater Monitoring\u00a0..."
+}
+Relevant (Y/N)? Y
+{
+    "title": "Department of Health | New Jersey COVID-19 Dashboard",
+    "url": "https://www.nj.gov/health/cd/topics/covid2019_dashboard.shtml",
+    "description": "NJ COVID-19 Dashboard."
+}
+Relevant (Y/N)? Y
+{
+    "title": "COVID-19 Data In Virginia - Coronavirus",
+    "url": "https://www.vdh.virginia.gov/coronavirus/see-the-numbers/covid-19-in-virginia/",
+    "description": "COVID-19 Case Dashboards ... COVID-19 Vaccine Dashboards ... Incidence Indicators; Severity Indicators; COVID-19 in Virginia; Vaccination; Surveillance of\u00a0..."
+}
+Relevant (Y/N)? Y
+{
+    "title": "COVID Data and Reports - Emergency Operations Center - County ...",
+    "url": "https://covid19.sccgov.org/dashboards",
+    "description": "COVID Dashboards \u00b7 Community Spread \u00b7 Vaccinations \u00b7 Cases and Deaths \u00b7 Hospitalization \u00b7 Testing and Variants \u00b7 Financial Tracking\u200b\u200b\u200b\u200b\u200b\u200b\u200b."
+}
+Relevant (Y/N)? Y
+======================
+Query: ['cases', 'dashboards', 'covid-19']
+Precision: 1.0
+Desired precision reached, done
