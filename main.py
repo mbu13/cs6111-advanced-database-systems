@@ -76,7 +76,12 @@ def word_frequency(text, stop):
             if word not in tflist:
                 tflist[word] = 0
             tflist[word] += 1
+
+    sum = sum(tflist.values())
+    for word in tflist:
+        tflist[word] = tflist[word]/ sum
     return tflist
+
 
 """
     Function to get the document frequency for each term in the relevane webpages
