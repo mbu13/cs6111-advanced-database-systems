@@ -76,9 +76,6 @@ def word_frequency(text, stop):
             if word not in tflist:
                 tflist[word] = 0
             tflist[word] += 1
-
-    for word in tflist:
-        tflist[word] = 1 + math.log(tflist[word], 2)
     return tflist
 
 
@@ -184,7 +181,7 @@ def get_maxes(tfidf, query, df):
                 keys.append(tuple((k,v, df[k])))
                 # make sure each document provides at most 5 possible terms
                 count += 1
-                if count > 4:
+                if count > 5:
                     break
     
     # sort the list of terms by document frequency
