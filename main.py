@@ -3,10 +3,16 @@ import json
 import math
 import urllib.request
 import bs4
+import numpy as np
+import sys
+from collections import defaultdict
 
 from googleapiclient.discovery import build
 
+TOP_N_CLOSEST = 2
+MAX_POSSIBLE_TERMS = 5
 MAX_ITEMS = 10
+CACHE = {}
 
 def get_google_search_items(api_key, engine_id, words):
     service = build(
@@ -86,7 +92,7 @@ def word_frequency(text, stop):
 """
 def doc_freq(tf_list):
     # initialize document frequency dictionary
-    df = {}
+    df = defaultdict(int)
 
     # increment each word in the document once if it appears in the document
     for result in tf_list:
@@ -119,7 +125,11 @@ def tf_idf(tf_list, df, N):
     input: list of webpages, list of stop words
     output: list of term frequency dictionaries
 """
-def get_website(output, stop):
+def get_website(output):
+    # get stop words
+    f = open('stop.txt', 'r')
+    stop = f.read()
+
     # initialize return variable
     tf_list = []
     text_list = []
@@ -130,7 +140,12 @@ def get_website(output, stop):
         link = doc['url']
         # try to open the website, go to the next webpage if error is given
         try:
-            htmlfile = urllib.request.urlopen(link).read()
+            # if already in cache, no need to make another request
+            if CACHE.get(link):
+                htmlfile = CACHE[link]
+            else:
+                htmlfile = urllib.request.urlopen(link).read()
+                CACHE[link] = htmlfile
         except urllib.error.HTTPError as e:
             continue
         # parse the webpage for the body
@@ -140,7 +155,7 @@ def get_website(output, stop):
         text = soup.get_text()
         lines = (line.strip() for line in text.splitlines())
         chunks = (phrase.strip() for line in lines for phrase in line.split(" "))
-        text = '\n'.join(chunk for chunk in chunks if chunk)
+        text = '\n'.join(chunk for chunk in chunks if chunk and chunk.isalnum())
 
         # calculate term frequecies of the webpage body
         tf = word_frequency(text, stop)
@@ -180,13 +195,99 @@ def get_maxes(tfidf, query, df):
                 keys.append(tuple((k,v, df[k])))
                 # make sure each document provides at most 5 possible terms
                 count += 1
-                if count > 4:
+                if count >= MAX_POSSIBLE_TERMS:
                     break
     
     # sort the list of terms by document frequency
     sort = sorted(keys, key=lambda tup: tup[2])
     sort.reverse()
     return sort
+
+
+"""
+    Caclulate the similarity between two vectors
+"""
+'''
+def get_similarity_score(v1, v2):
+    dot = np.dot(v1, v2)
+    v1_norm = np.linalg.norm(v1)
+    v2_norm = np.linalg.norm(v2)
+
+    return dot / (v1_norm * v2_norm)
+'''
+"""
+    Gets the relevant documents sorted by decreasing order of cosine
+    of the document vector to the query vector
+"""
+'''
+def get_ranked_documents(query, relevant, df):
+    query_vector = np.array([])
+    for word in query:
+        frequency = df[word]
+        np.append(query_vector, [frequency])
+
+    # loop through documents to calculate vectors as it relates to the query
+    tf_list = get_website(relevant)
+    tups = []
+
+    for i, tf in enumerate(tf_list):
+        doc_vector = np.array([])
+        for word in query:
+            # TODO check this logic, tf vs df
+            if not tf.get(word):
+                continue
+
+            frequency = tf[word]
+            np.append(doc_vector, [frequency])
+
+        # Compare vectors
+        score = get_similarity_score(query_vector, doc_vector)
+        tups.append((i, score))
+
+    # sort by increasing order of scores
+    tups = sorted(tups, key=lambda x: x[1])
+
+    return [relevant[x[0]] for x in tups]
+'''
+
+"""
+    Calculate average word distance between the new candidate words
+    and the original query words
+"""
+def get_proximities(keys, query, docs):
+    candidate_words = set([k[0] for k in keys])
+
+    def get_distance(candidate_word, query_word, doc):
+        # calculate distance between two words in a given doc
+        try:
+            # try all possible indexes of each word to minimize distance
+            min_dist = sys.maxsize
+            for i, src in enumerate(doc):
+                if src == query_word:
+                    for j, dst in enumerate(doc):
+                        if dst == candidate_word:
+                            min_dist = min(min_dist, abs(j - i))
+
+        except ValueError:
+            return sys.maxsize
+
+        return min_dist
+
+    proximities = []
+    for word in candidate_words:
+        distances = []
+
+        for q in query:
+            for d in docs:
+                distances.append(get_distance(word, q, d))
+        
+        avg = sum(distances) / len(distances)
+        proximities.append((word, avg))
+
+    tups = sorted(proximities, key=lambda x: x[1])
+    print("### Sorted prox words: ", tups)
+    return [x[0] for x in tups]
+
 
 def main():
     if len(sys.argv) < 5:
@@ -196,56 +297,73 @@ def main():
     GOOGLE_API_KEY = sys.argv[1]
     GOOGLE_ENGINE_ID = sys.argv[2]
     PRECISION = float(sys.argv[3])
-    WORDS = sys.argv[4:]
-    f = open('stop.txt', 'r')
-    stop = f.read()
-    # Make search API call
-    items = get_google_search_items(GOOGLE_API_KEY, GOOGLE_ENGINE_ID, WORDS)
+    WORDS = sys.argv[4].split()
     
-    # Format items to desired output
-    output = get_formatted_items(items)
-    if len(output) < 10:
-        print("======================\n"
-            + "Query: " + str(WORDS) + 
-            "\nQuery returned less than 10 results, done")
-        exit("")
+    def run_query(words):
+        # Make search API call
+        items = get_google_search_items(GOOGLE_API_KEY, GOOGLE_ENGINE_ID, words)
 
-    # prompt user for relevance feedback
-    precision, relevant = get_relevant_docs(output)
+        # Format items to desired output
+        output = get_formatted_items(items)
+        if len(output) < 10:
+            print("======================\n"
+                + "Query: " + str(words) + 
+                "\nQuery returned less than 10 results, done")
+            return None, 0
 
-    # check if first ten documents are good enough
-    if precision >= PRECISION:
-        print("======================\n"
-            + "Query: " + str(WORDS) + "\nPrecision: " + str(precision) + 
-            "\nDesired precision reached, done")
-        exit("")
+        # prompt user for relevance feedback
+        precision, relevant = get_relevant_docs(output)
 
-    # check if all documents are not relevant
-    if precision == 0:
-        print("======================\n"
-            + "Query: " + str(WORDS) + "\nPrecision: " + str(precision) + 
-            "\nPrecision = 0, Done")
-        exit("")
-    
-    # get the word frequency for each document
-    tf_list, text_list = get_website(relevant, stop) # list of dicts
-    # check if none of the webpages could be analyzed
-    if len(tf_list) == 0:
-        print("======================\n"
-            + "Query: " + str(WORDS) + "\nPrecision: " + str(precision) + 
-            "\nNone of the webpages could be analyzed, done")
-        exit("")
+        # check if first ten documents are good enough
+        if precision >= PRECISION:
+            print("======================\n"
+                + "Query: " + str(words) + "\nPrecision: " + str(precision) + 
+                "\nDesired precision reached, done")
+            return None, precision
 
-    # get the document frequency for each word
-    df = doc_freq(tf_list) # dict
+        # check if all documents are not relevant
+        if precision == 0:
+            print("======================\n"
+                + "Query: " + str(words) + "\nPrecision: " + str(precision) + 
+                "\nPrecision = 0, Done")
+            return None, 0
+        
+        # get the word frequency for each document
+        tf_list, text_list = get_website(relevant) # list of dicts
+        # check if none of the webpages could be analyzed
+        if len(tf_list) == 0:
+            print("======================\n"
+                + "Query: " + str(words) + "\nPrecision: " + str(precision) + 
+                "\nNone of the webpages could be analyzed, done")
+            return None, precision
 
-    # tfidf = tf_idf(tf_list, df, len(tf_list))
+        # get the document frequency for each word
+        df = doc_freq(tf_list) # dict
 
-    # get sorted list of potential words to query on (sorted based on df)
-    keys = get_maxes(tf_list, str(WORDS).lower(), df) # list of tuple(word, tf, df)
-    print(df)
-    
-    
+        # tfidf = tf_idf(tf_list, df, len(tf_list))
+
+        # get sorted list of potential words to query on (sorted based on df)
+        keys = get_maxes(tf_list, str(words).lower(), df) # list of tuple(word, tf, df)
+
+        # get top words to append to query
+        prox = get_proximities(keys, words, text_list)
+
+        return prox[0:TOP_N_CLOSEST], precision
+
+
+    # Run queries until precision is reached
+    query = WORDS
+    while(True):
+        print("Parameters:\nClient key  = {}\nEngine key  = {}\nQuery       = {}\nPrecision   = {}\nGoogle Search Results:\n======================\n".format(GOOGLE_API_KEY, GOOGLE_ENGINE_ID, " ".join(query), PRECISION))
+
+        augment, precision = run_query(query)
+        if not augment:
+            return
+        
+        print("======================\nFEEDBACK SUMMARY\nQuery {}\nPrecision {}\nStill below the desired precision of {}\nAugmenting by  {}".format(" ".join(query), precision, PRECISION, " ".join(augment)))
+        
+        query = query + augment
+
 
 if __name__ == "__main__":
     main()
