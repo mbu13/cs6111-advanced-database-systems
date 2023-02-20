@@ -3,7 +3,6 @@ import json
 import math
 import urllib.request
 import bs4
-import numpy as np
 import sys
 from collections import defaultdict
 
@@ -371,7 +370,7 @@ def main():
 
         augment, precision = run_query(query)
         if not augment:
-            print("ERROR: ", augment)
+            print("ERROR: Nothing to augment")
             return
         
         print("======================\nFEEDBACK SUMMARY\nQuery {}\nPrecision {}\nStill below the desired precision of {}\nAugmenting by  {}".format(" ".join(query), precision, PRECISION, " ".join(augment)))
