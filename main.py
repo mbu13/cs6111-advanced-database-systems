@@ -73,11 +73,9 @@ def get_relevant_docs(output):
 def word_frequency(text, stop):
     # initialize dictionary
     tflist = {}
-    # split webpage text into seperate words
-    doc = text.lower().split("\n")
 
     # for each word in the webpage, increment the term frequency
-    for word in doc:
+    for word in text:
         if word not in stop:
             if word not in tflist:
                 tflist[word] = 0
@@ -149,20 +147,18 @@ def get_website(output):
         except urllib.error.HTTPError as e:
             continue
         # parse the webpage for the body
-        soup = bs4.BeautifulSoup(htmlfile, features="html.parser").find('body')
+        soup = bs4.BeautifulSoup(htmlfile, "html.parser")
         for script in soup(["script", "style"]):
-            script.extract()
-        text = soup.get_text()
-        lines = (line.strip() for line in text.splitlines())
-        chunks = (phrase.strip() for line in lines for phrase in line.split(" "))
-        text = '\n'.join(chunk for chunk in chunks if chunk and chunk.isalnum())
+            script.decompose()
+        text = ' '.join(soup.stripped_strings).lower().split(' ')
 
         # calculate term frequecies of the webpage body
         tf = word_frequency(text, stop)
         # add term frequency dictionary to list
         tf_list.append(tf)
-        text = text.lower().split("\n")
         text_list.append(text)
+
+    print("TEXT: ", len(text_list), "\n")
     return tf_list, text_list
 
 """
@@ -180,9 +176,11 @@ def get_maxes(tfidf, query, df):
     for lis in tfidf:
         # initialize counter variable
         count = 0
+
         # sort dictionary by term frequency greatest to least
-        lis = sorted(lis.items(), key=lambda kv: (kv[1], kv[0]))
+        lis = sorted(lis.items(), key=lambda kv: kv[1])
         lis.reverse()
+
         # for each term in the dictionary
         for tup in lis:
             # get the term with the highest term frequency
@@ -195,7 +193,7 @@ def get_maxes(tfidf, query, df):
                 keys.append(tuple((k,v, df[k])))
                 # make sure each document provides at most 5 possible terms
                 count += 1
-                if count >= MAX_POSSIBLE_TERMS:
+                if count > 4:
                     break
     
     # sort the list of terms by document frequency
@@ -258,18 +256,24 @@ def get_proximities(keys, query, docs):
     candidate_words = set([k[0] for k in keys])
 
     def get_distance(candidate_word, query_word, doc):
+        if not doc:
+            return None
+
         # calculate distance between two words in a given doc
-        try:
-            # try all possible indexes of each word to minimize distance
-            min_dist = sys.maxsize
-            for i, src in enumerate(doc):
-                if src == query_word:
-                    for j, dst in enumerate(doc):
-                        if dst == candidate_word:
+
+        # try all possible indexes of each word to minimize distance
+        min_dist = None
+        for i, src in enumerate(doc):
+            if src == query_word:
+                for j, dst in enumerate(doc):
+                    if dst == candidate_word:
+                        if not min_dist:
+                            min_dist = abs(j - i)
+                        else:
                             min_dist = min(min_dist, abs(j - i))
 
-        except ValueError:
-            return sys.maxsize
+        if min_dist == sys.maxsize:
+            print('ERROR ', doc)
 
         return min_dist
 
@@ -279,13 +283,17 @@ def get_proximities(keys, query, docs):
 
         for q in query:
             for d in docs:
-                distances.append(get_distance(word, q, d))
+                distance = get_distance(word, q, d)
+
+                if not distance:
+                    continue
+
+                distances.append(distance)
         
         avg = sum(distances) / len(distances)
         proximities.append((word, avg))
 
     tups = sorted(proximities, key=lambda x: x[1])
-    print("### Sorted prox words: ", tups)
     return [x[0] for x in tups]
 
 
@@ -344,9 +352,14 @@ def main():
 
         # get sorted list of potential words to query on (sorted based on df)
         keys = get_maxes(tf_list, str(words).lower(), df) # list of tuple(word, tf, df)
+        k = []
+        if len(tf_list) > 1:
+            for i in keys:
+                if i[2] != 1:
+                    k.append(i)
 
         # get top words to append to query
-        prox = get_proximities(keys, words, text_list)
+        prox = get_proximities(k, words, text_list)
 
         return prox[0:TOP_N_CLOSEST], precision
 
@@ -358,6 +371,7 @@ def main():
 
         augment, precision = run_query(query)
         if not augment:
+            print("ERROR: ", augment)
             return
         
         print("======================\nFEEDBACK SUMMARY\nQuery {}\nPrecision {}\nStill below the desired precision of {}\nAugmenting by  {}".format(" ".join(query), precision, PRECISION, " ".join(augment)))
