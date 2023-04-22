@@ -1,9 +1,10 @@
 import sys
 import pandas as pd
-# import pandasql as sql
+import pandasql as sql
 
 def one_item_sets(DF, sup):
-    
+    q = "SELECT DBN FROM DF WHERE sum(DBN) >= {}".format(sup)
+    temp = sql.sqldf(q, globals())
     return None
 
 def apriori(L1, DF, sup, conf):
