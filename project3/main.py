@@ -2,11 +2,11 @@ import sys
 import pandas as pd
 import pandasql as sql
 
-def one_item_sets(DF):
+def one_item_sets(DF, sup):
 
     return None
 
-def apriori(L1, DF):
+def apriori(L1, DF, sup, conf):
     return None
 
 def main():
@@ -29,8 +29,10 @@ def main():
     # open dataset as a pandas dataframe
     DF = pd.read_csv(DATASET)
     
-    L1 = one_item_sets(DF)
-    ANSWER = apriori(L1, DF)
+    # get all large 1-item sets
+    L1 = one_item_sets(DF, MIN_SUP)
+    # run apriori alg on dataset
+    ANSWER = apriori(L1, DF, MIN_SUP, MIN_CONF)
 
 
 
