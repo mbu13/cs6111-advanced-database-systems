@@ -3,8 +3,9 @@ import pandas as pd
 import pandasql as sql
 
 def one_item_sets(DF, sup):
-    q = "SELECT DBN FROM DF WHERE sum(DBN) >= {}".format(sup)
+    q = "SELECT DBN, COUNT(DBN) as count FROM DF GROUP BY DBN HAVING count >= {}".format(sup)
     temp = sql.sqldf(q, globals())
+    print(temp)
     return None
 
 def apriori(L1, DF, sup, conf):
