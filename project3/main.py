@@ -1,9 +1,9 @@
 import sys
 import pandas as pd
-import pandasql as sql
+# import pandasql as sql
 
 def one_item_sets(DF, sup):
-
+    
     return None
 
 def apriori(L1, DF, sup, conf):
@@ -15,7 +15,6 @@ def main():
         print('Required input format: python3 main.py INTEGRATED-DATASET.csv <min_sup> <min_conf>')
         return
     DATASET = sys.argv[1]
-    print(DATASET)
     MIN_SUP = float(sys.argv[2])
     MIN_CONF = float(sys.argv[3])
 
@@ -28,7 +27,7 @@ def main():
         return
     # open dataset as a pandas dataframe
     DF = pd.read_csv(DATASET)
-    
+    DF = DF.drop(DF.columns[0], axis=1)
     # get all large 1-item sets
     L1 = one_item_sets(DF, MIN_SUP)
     # run apriori alg on dataset
