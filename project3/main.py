@@ -7,6 +7,7 @@ def one_item_sets(DF, sup):
     large = {}
 
     # Get all DBNs that occur more than min_sup 
+    # havent decided if we are going to consider dbn since it only occurs 7 times maximum
     total = DF.shape[0]
     min_sup = sup * total
     q1 = "SELECT DBN, COUNT(DBN) as count FROM DF GROUP BY DBN HAVING count >= {} ORDER BY count DESC".format(min_sup)
@@ -33,7 +34,7 @@ def one_item_sets(DF, sup):
         enrollment = sql.sqldf(q3, locals())
         enroll = enrollment.iloc[0]['count']
         key = 'enrollment {}-{}'.format(val1, val2)
-        if enroll > min_sup:
+        if enroll >= min_sup:
             large[key] = enroll
     
     # iterate over remaining columns (which are all percentages)
@@ -46,11 +47,12 @@ def one_item_sets(DF, sup):
         for j in range(16):
             q4 = "SELECT COUNT(ALL {}) as count FROM DF WHERE {} BETWEEN {} AND {}".format(cols[j], cols[j], val1, val2)
             table = sql.sqldf(q4, locals())
-            
-    
-    #TODO: figure out how to extract 1-item sets
-    
-    return None
+            t = table.iloc[0]['count']
+            key = '{} {}-{}%'.format(cols[j], val1, val2)
+            if t >= min_sup:
+                large[key] = t
+             
+    return large
 
 def apriori(L1, DF, sup, conf):
     return None
