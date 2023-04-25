@@ -68,6 +68,11 @@ Matthew Bu (mb4753)
             * male_per
             * female_per
 * All three datasets were joined on DBN and Year
+* These datasets together can provide some insight into how certain schools and school demographics affect test scores for students in grades 3-8 and graduation rates for high schoolers. These datasets can also shed light on which years had higher or lower test scores and graduation rates.
 
-  
+## Internal Design
+
+## Sample Run Command Line
+
+## Additional Information
         
