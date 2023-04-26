@@ -61,41 +61,45 @@ def one_item_sets(DF, sup):
     return large
 
 
-def getSupports(CR, allItems, sup, supports):
+def getSupports(CR, all_items, sup, supports, all_freq):
     freq = set()
     sub_supports = defaultdict(int)
 
     for item in CR:
-        for itemSet in allItems:
+        for itemSet in all_items:
             if item.issubset(itemSet):
                 supports[item] += 1
                 sub_supports[item] += 1
 
     for item, supCount in sub_supports.items():
-        support = float(supCount / len(allItems))
+        support = float(supCount / len(all_items))
         if(support >= sup):
             freq.add(item)
+            all_freq[item] = support
 
     return freq
 
 def apriori(filename, sup, conf):
-    itemSets = []
+    items = []
+    all_freq = {}
     C1 = set()
     R = 2
 
     with open(filename, 'r') as file:
-        lines = csv.reader(file)
-        for line in lines:
-            line = list(filter(None, line))
-            line = set(line)
-            for item in line:
-                C1.add(frozenset([item]))
-            itemSets.append(line)
+        reader = csv.DictReader(file)
+
+        for row in reader:
+            rowset = set()
+            for col in reader.fieldnames:
+                if row[col]:
+                    C1.add(frozenset([col + " " + row[col]]))
+                    rowset.add(col + " " + row[col])
+            items.append(rowset)
 
     freq = {}
     supports = defaultdict(int)
 
-    L1 = getSupports(C1, itemSets, sup, supports)
+    L1 = getSupports(C1, items, sup, supports, all_freq)
     curr = L1
 
     # Repeat until LR is null
@@ -113,7 +117,7 @@ def apriori(filename, sup, conf):
                     temp.remove(item)
                     break
         CR = temp
-        curr = getSupports(CR, itemSets, sup, supports)
+        curr = getSupports(CR, items, sup, supports, all_freq)
         R = R + 1
 
     # Calculate rules
@@ -126,8 +130,17 @@ def apriori(filename, sup, conf):
                 if(c > conf):
                     rules.append([set(s), set(item.difference(s)), c])
 
-    rules.sort(key=lambda x: x[2])
-    return freq, rules
+    rules.sort(key=lambda x: -x[2])
+    return all_freq, rules
+
+def pretty_print_results(frequency, rules, min_sup, min_conf):
+    print('==Frequent itemsets (min_sup={:.1%})'.format(min_sup))
+    for item, f in frequency.items():
+        print('{}, {:.1%}'.format(list(item), f))
+    
+    print('==High-confidence association rules (min_conf={:.1%})'.format(min_conf))
+    for r in rules:
+        print('{}=> {} (Conf: {:.1%}, Supp: {:.1%})'.format(list(r[0]), list(r[1]), r[2], frequency[frozenset(r[0])]))
 
 def main():
     # get program arguments and check values
@@ -150,8 +163,8 @@ def main():
     # get all large 1-item sets
     #L1 = one_item_sets(DF, MIN_SUP)
     # run apriori alg on dataset
-    frequency, ANSWER = apriori(DATASET, MIN_SUP, MIN_CONF)
-    print(ANSWER)
+    FREQUENCY, RULES = apriori(DATASET, MIN_SUP, MIN_CONF)
+    pretty_print_results(FREQUENCY, RULES, MIN_SUP, MIN_CONF)
 
 
 if __name__ == "__main__":
