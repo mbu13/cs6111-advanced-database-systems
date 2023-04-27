@@ -5,6 +5,10 @@ from collections import defaultdict
 import pandas as pd
 import pandasql as sql
 
+'''
+
+'''
+'''
 def one_item_sets(DF, sup):
     # initialize large 1-item set dictionary
     large = {}
@@ -59,8 +63,13 @@ def one_item_sets(DF, sup):
                 large[key] = t
 
     return large
+'''
 
-
+'''
+Returns a frequent item set
+based support being grreater than
+provided min support threshold
+'''
 def getSupports(CR, all_items, sup, supports, all_freq):
     freq = set()
     sub_supports = defaultdict(int)
@@ -76,9 +85,24 @@ def getSupports(CR, all_items, sup, supports, all_freq):
         if(support >= sup):
             freq.add(item)
             all_freq[item] = support
-
     return freq
 
+'''
+Get grouped buckets to find more meaningful
+association rules for percentage values
+'''
+def get_buckets(n, k):
+    ranges = []
+    
+    for r in range(0, n, k):
+        ranges.append([i for i in range(r, r+k)])
+    ranges.append([100])
+    return ranges
+
+'''
+Main apriori implementation which
+reads from a CSV and generates item sets
+'''
 def apriori(filename, sup, conf):
     items = []
     all_freq = {}
@@ -91,9 +115,19 @@ def apriori(filename, sup, conf):
         for row in reader:
             rowset = set()
             for col in reader.fieldnames:
-                if row[col]:
-                    C1.add(frozenset([col + " " + row[col]]))
-                    rowset.add(col + " " + row[col])
+                if not row[col]:
+                    continue
+                if row[col] and col not in {'DBN','Year','total_enrollment','Number Tested', 'male_per', 'female_per'}:
+                    # Map to a range
+                    ranges = get_buckets(100, 20) 
+                    group = None
+                    for r in ranges:
+                        if round(float(row[col])) in r:
+                            group = "{}-{}".format(r[0], r[-1])
+                            break
+
+                    C1.add(frozenset([col + " " + group]))
+                    rowset.add(col + " " + group)
             items.append(rowset)
 
     freq = {}
@@ -106,11 +140,13 @@ def apriori(filename, sup, conf):
     while(curr):
         freq[R-1] = curr
 
+        # Union each item
         CR = [a.union(b) for a in curr for b in curr if len(a.union(b)) == R]
         CR = set(CR)
 
         temp = CR.copy()
         for item in CR:
+            # Get all combination subsets
             subsets = itertools.combinations(item, R-1)
             for subset in subsets:
                 if(frozenset(subset) not in curr):
@@ -124,12 +160,16 @@ def apriori(filename, sup, conf):
     rules = []
     for _, itemSet in freq.items():
         for item in itemSet:
+            # Get all combination subsets of size in range of length of itemset
             subsets = itertools.chain.from_iterable(itertools.combinations(item, r) for r in range(1, len(item)))
             for s in subsets:
                 c = float(supports[item] / supports[frozenset(s)])
                 if(c > conf):
+                    if len(set(item.difference(s))) > 1:
+                        continue
                     rules.append([set(s), set(item.difference(s)), c])
 
+    # Sort by decreasing order
     rules.sort(key=lambda x: -x[2])
     return all_freq, rules
 
@@ -159,13 +199,12 @@ def main():
         print("min_sup must be between 0 and 1")
         return
     # open dataset as a pandas dataframe
-    DF = pd.read_csv(DATASET)
+    #DF = pd.read_csv(DATASET)
     # get all large 1-item sets
     #L1 = one_item_sets(DF, MIN_SUP)
     # run apriori alg on dataset
     FREQUENCY, RULES = apriori(DATASET, MIN_SUP, MIN_CONF)
     pretty_print_results(FREQUENCY, RULES, MIN_SUP, MIN_CONF)
-
 
 if __name__ == "__main__":
     main()
