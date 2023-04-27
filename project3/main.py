@@ -2,8 +2,8 @@ import sys
 import csv
 import itertools
 from collections import defaultdict
-import pandas as pd
-import pandasql as sql
+# import pandas as pd
+# import pandasql as sql
 
 '''
 This was the original code to get all the large 1-item sets from the data.

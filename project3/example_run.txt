@@ -1,0 +1,547 @@
+==Frequent itemsets (min_sup=20.0%)
+['Level 3 % 20-39'], 28.8%
+['Level 3 % 40-59'], 50.3%
+['hispanic_per 0-19'], 29.7%
+['sped_percent 20-39'], 23.7%
+['hispanic_per 60-79'], 20.2%
+['Level 4 % 20-39'], 26.9%
+['Level 4 % 0-19'], 57.5%
+['Level 1 % 0-19'], 90.9%
+['Level 3+4 % 60-79'], 29.3%
+['black_per 20-39'], 22.8%
+['Level 3+4 % 40-59'], 22.5%
+['asian_per 0-19'], 78.8%
+['hispanic_per 20-39'], 24.7%
+['black_per 0-19'], 44.1%
+['sped_percent 0-19'], 75.9%
+['ell_percent 0-19'], 74.3%
+['Level 2 % 0-19'], 41.4%
+['ell_percent 20-39'], 21.1%
+['white_per 0-19'], 75.3%
+['Level 3+4 % 80-99'], 34.1%
+['Level 2 % 40-59'], 21.8%
+['Level 2 % 20-39'], 36.4%
+['Level 3 % 40-59', 'asian_per 0-19'], 36.9%
+['hispanic_per 0-19', 'asian_per 0-19'], 21.8%
+['Level 3 % 40-59', 'Level 1 % 0-19'], 49.5%
+['Level 3+4 % 80-99', 'asian_per 0-19'], 21.2%
+['black_per 0-19', 'Level 2 % 0-19'], 27.0%
+['Level 2 % 0-19', 'sped_percent 0-19'], 35.6%
+['black_per 0-19', 'white_per 0-19'], 22.7%
+['Level 2 % 20-39', 'Level 1 % 0-19'], 34.2%
+['Level 1 % 0-19', 'asian_per 0-19'], 69.8%
+['ell_percent 0-19', 'Level 1 % 0-19'], 68.2%
+['Level 4 % 0-19', 'Level 3+4 % 40-59'], 21.2%
+['black_per 0-19', 'sped_percent 0-19'], 37.6%
+['Level 4 % 0-19', 'ell_percent 0-19'], 41.7%
+['sped_percent 20-39', 'asian_per 0-19'], 22.7%
+['Level 3+4 % 60-79', 'white_per 0-19'], 22.9%
+['black_per 0-19', 'Level 1 % 0-19'], 42.5%
+['Level 4 % 0-19', 'white_per 0-19'], 54.6%
+['Level 3 % 40-59', 'Level 2 % 0-19'], 22.5%
+['Level 4 % 20-39', 'sped_percent 0-19'], 22.9%
+['hispanic_per 0-19', 'Level 1 % 0-19'], 27.9%
+['Level 2 % 20-39', 'sped_percent 0-19'], 27.0%
+['Level 2 % 0-19', 'Level 3+4 % 80-99'], 34.0%
+['Level 4 % 0-19', 'sped_percent 0-19'], 38.4%
+['ell_percent 0-19', 'sped_percent 0-19'], 55.7%
+['black_per 0-19', 'ell_percent 0-19'], 26.5%
+['sped_percent 0-19', 'white_per 0-19'], 55.0%
+['Level 4 % 0-19', 'Level 1 % 0-19'], 48.4%
+['Level 2 % 0-19', 'asian_per 0-19'], 26.3%
+['Level 2 % 20-39', 'Level 3+4 % 60-79'], 23.0%
+['Level 3+4 % 60-79', 'asian_per 0-19'], 23.5%
+['Level 4 % 20-39', 'Level 1 % 0-19'], 26.9%
+['Level 4 % 0-19', 'Level 2 % 20-39'], 27.5%
+['ell_percent 0-19', 'Level 3+4 % 60-79'], 21.6%
+['sped_percent 0-19', 'Level 1 % 0-19'], 71.2%
+['Level 3 % 40-59', 'Level 2 % 20-39'], 24.6%
+['Level 2 % 0-19', 'white_per 0-19'], 22.8%
+['Level 3 % 20-39', 'asian_per 0-19'], 22.6%
+['ell_percent 0-19', 'white_per 0-19'], 52.6%
+['Level 1 % 0-19', 'white_per 0-19'], 66.3%
+['hispanic_per 0-19', 'sped_percent 0-19'], 25.8%
+['Level 3 % 40-59', 'sped_percent 0-19'], 40.4%
+['Level 3 % 40-59', 'black_per 0-19'], 26.3%
+['Level 3+4 % 40-59', 'Level 1 % 0-19'], 20.9%
+['ell_percent 0-19', 'hispanic_per 20-39'], 21.6%
+['Level 3+4 % 40-59', 'asian_per 0-19'], 20.8%
+['sped_percent 0-19', 'Level 3+4 % 80-99'], 29.8%
+['black_per 0-19', 'Level 3+4 % 80-99'], 23.1%
+['Level 4 % 0-19', 'Level 2 % 40-59'], 21.6%
+['Level 4 % 0-19', 'Level 3 % 40-59'], 23.7%
+['Level 3+4 % 40-59', 'white_per 0-19'], 21.1%
+['ell_percent 0-19', 'hispanic_per 0-19'], 27.4%
+['Level 3 % 40-59', 'ell_percent 0-19'], 37.5%
+['ell_percent 0-19', 'Level 3 % 20-39'], 21.6%
+['Level 3 % 20-39', 'Level 1 % 0-19'], 23.1%
+['Level 3+4 % 60-79', 'sped_percent 0-19'], 22.1%
+['Level 2 % 0-19', 'Level 1 % 0-19'], 41.3%
+['Level 4 % 0-19', 'asian_per 0-19'], 54.6%
+['Level 3 % 20-39', 'white_per 0-19'], 22.6%
+['hispanic_per 20-39', 'Level 1 % 0-19'], 23.0%
+['Level 3 % 40-59', 'white_per 0-19'], 34.2%
+['ell_percent 0-19', 'asian_per 0-19'], 60.5%
+['ell_percent 0-19', 'Level 2 % 20-39'], 26.8%
+['Level 2 % 20-39', 'asian_per 0-19'], 30.9%
+['Level 2 % 40-59', 'asian_per 0-19'], 21.2%
+['Level 2 % 20-39', 'white_per 0-19'], 30.7%
+['white_per 0-19', 'asian_per 0-19'], 64.0%
+['Level 1 % 0-19', 'Level 3+4 % 80-99'], 34.1%
+['black_per 20-39', 'asian_per 0-19'], 21.2%
+['ell_percent 0-19', 'Level 3+4 % 80-99'], 26.2%
+['sped_percent 0-19', 'asian_per 0-19'], 55.7%
+['black_per 0-19', 'asian_per 0-19'], 25.4%
+['Level 3 % 20-39', 'sped_percent 0-19'], 21.1%
+['Level 3+4 % 60-79', 'Level 1 % 0-19'], 29.2%
+['hispanic_per 60-79', 'white_per 0-19'], 20.0%
+['ell_percent 0-19', 'Level 2 % 0-19'], 31.7%
+['Level 2 % 40-59', 'white_per 0-19'], 21.4%
+['black_per 0-19', 'Level 1 % 0-19', 'asian_per 0-19'], 23.9%
+['white_per 0-19', 'Level 2 % 20-39', 'asian_per 0-19'], 26.9%
+['hispanic_per 0-19', 'Level 1 % 0-19', 'asian_per 0-19'], 20.1%
+['Level 4 % 0-19', 'Level 1 % 0-19', 'white_per 0-19'], 45.7%
+['Level 2 % 20-39', 'sped_percent 0-19', 'asian_per 0-19'], 21.7%
+['asian_per 0-19', 'Level 2 % 0-19', 'Level 3+4 % 80-99'], 21.1%
+['ell_percent 0-19', 'hispanic_per 0-19', 'Level 1 % 0-19'], 25.7%
+['Level 4 % 0-19', 'ell_percent 0-19', 'sped_percent 0-19'], 27.3%
+['asian_per 0-19', 'sped_percent 0-19', 'white_per 0-19'], 44.3%
+['black_per 0-19', 'Level 1 % 0-19', 'white_per 0-19'], 21.2%
+['Level 4 % 0-19', 'Level 2 % 20-39', 'asian_per 0-19'], 25.6%
+['Level 3 % 40-59', 'Level 2 % 20-39', 'white_per 0-19'], 21.1%
+['sped_percent 0-19', 'Level 1 % 0-19', 'asian_per 0-19'], 51.2%
+['ell_percent 0-19', 'white_per 0-19', 'asian_per 0-19'], 46.3%
+['ell_percent 0-19', 'Level 2 % 0-19', 'sped_percent 0-19'], 27.0%
+['Level 4 % 0-19', 'sped_percent 0-19', 'white_per 0-19'], 36.6%
+['Level 2 % 20-39', 'Level 1 % 0-19', 'asian_per 0-19'], 28.7%
+['Level 4 % 0-19', 'ell_percent 0-19', 'Level 1 % 0-19'], 35.6%
+['Level 4 % 0-19', 'Level 3 % 40-59', 'white_per 0-19'], 22.1%
+['Level 4 % 0-19', 'ell_percent 0-19', 'asian_per 0-19'], 40.0%
+['Level 3 % 40-59', 'sped_percent 0-19', 'Level 1 % 0-19'], 39.8%
+['Level 4 % 0-19', 'Level 2 % 20-39', 'white_per 0-19'], 25.6%
+['Level 4 % 0-19', 'sped_percent 0-19', 'asian_per 0-19'], 35.8%
+['ell_percent 0-19', 'sped_percent 0-19', 'white_per 0-19'], 37.4%
+['Level 4 % 0-19', 'Level 2 % 20-39', 'Level 1 % 0-19'], 25.3%
+['ell_percent 0-19', 'hispanic_per 20-39', 'Level 1 % 0-19'], 20.0%
+['ell_percent 0-19', 'Level 2 % 20-39', 'asian_per 0-19'], 23.6%
+['black_per 0-19', 'Level 3 % 40-59', 'Level 1 % 0-19'], 26.2%
+['hispanic_per 0-19', 'sped_percent 0-19', 'Level 1 % 0-19'], 24.8%
+['black_per 0-19', 'Level 2 % 0-19', 'Level 3+4 % 80-99'], 23.1%
+['Level 4 % 0-19', 'sped_percent 0-19', 'Level 1 % 0-19'], 33.8%
+['Level 3+4 % 40-59', 'Level 4 % 0-19', 'white_per 0-19'], 20.1%
+['Level 2 % 0-19', 'Level 1 % 0-19', 'Level 3+4 % 80-99'], 34.0%
+['white_per 0-19', 'Level 1 % 0-19', 'asian_per 0-19'], 55.1%
+['ell_percent 0-19', 'Level 1 % 0-19', 'white_per 0-19'], 46.6%
+['Level 3 % 40-59', 'sped_percent 0-19', 'asian_per 0-19'], 27.8%
+['ell_percent 0-19', 'Level 2 % 20-39', 'Level 1 % 0-19'], 25.2%
+['ell_percent 0-19', 'Level 3+4 % 60-79', 'Level 1 % 0-19'], 21.5%
+['Level 2 % 20-39', 'sped_percent 0-19', 'white_per 0-19'], 22.6%
+['Level 4 % 0-19', 'Level 2 % 40-59', 'asian_per 0-19'], 21.1%
+['Level 3+4 % 60-79', 'sped_percent 0-19', 'Level 1 % 0-19'], 22.0%
+['ell_percent 0-19', 'hispanic_per 0-19', 'asian_per 0-19'], 21.4%
+['Level 2 % 20-39', 'sped_percent 0-19', 'Level 1 % 0-19'], 25.6%
+['Level 3 % 40-59', 'Level 1 % 0-19', 'asian_per 0-19'], 36.1%
+['ell_percent 0-19', 'Level 2 % 0-19', 'Level 3+4 % 80-99'], 26.2%
+['Level 3 % 40-59', 'ell_percent 0-19', 'Level 1 % 0-19'], 36.9%
+['Level 3+4 % 60-79', 'Level 1 % 0-19', 'white_per 0-19'], 22.9%
+['Level 2 % 20-39', 'Level 1 % 0-19', 'white_per 0-19'], 28.5%
+['Level 2 % 0-19', 'Level 1 % 0-19', 'asian_per 0-19'], 26.3%
+['ell_percent 0-19', 'Level 1 % 0-19', 'asian_per 0-19'], 54.4%
+['ell_percent 0-19', 'Level 2 % 0-19', 'Level 1 % 0-19'], 31.6%
+['ell_percent 0-19', 'sped_percent 0-19', 'black_per 0-19'], 22.4%
+['Level 4 % 0-19', 'ell_percent 0-19', 'Level 2 % 20-39'], 20.4%
+['Level 4 % 0-19', 'white_per 0-19', 'asian_per 0-19'], 52.1%
+['Level 3+4 % 60-79', 'Level 1 % 0-19', 'asian_per 0-19'], 23.5%
+['sped_percent 0-19', 'Level 1 % 0-19', 'Level 3+4 % 80-99'], 29.8%
+['ell_percent 0-19', 'hispanic_per 0-19', 'sped_percent 0-19'], 23.6%
+['ell_percent 0-19', 'Level 3 % 40-59', 'sped_percent 0-19'], 29.6%
+['Level 4 % 0-19', 'Level 1 % 0-19', 'asian_per 0-19'], 45.7%
+['black_per 0-19', 'Level 2 % 0-19', 'sped_percent 0-19'], 23.9%
+['Level 3 % 40-59', 'ell_percent 0-19', 'white_per 0-19'], 23.7%
+['sped_percent 0-19', 'Level 1 % 0-19', 'white_per 0-19'], 50.4%
+['Level 2 % 0-19', 'sped_percent 0-19', 'Level 1 % 0-19'], 35.6%
+['black_per 0-19', 'ell_percent 0-19', 'Level 1 % 0-19'], 26.3%
+['Level 3 % 40-59', 'Level 2 % 20-39', 'asian_per 0-19'], 21.4%
+['ell_percent 0-19', 'Level 1 % 0-19', 'Level 3+4 % 80-99'], 26.2%
+['black_per 0-19', 'Level 3 % 40-59', 'sped_percent 0-19'], 22.7%
+['Level 3 % 40-59', 'Level 2 % 0-19', 'Level 1 % 0-19'], 22.5%
+['black_per 0-19', 'sped_percent 0-19', 'Level 3+4 % 80-99'], 20.5%
+['Level 3 % 40-59', 'sped_percent 0-19', 'white_per 0-19'], 26.8%
+['Level 3+4 % 60-79', 'Level 2 % 20-39', 'Level 1 % 0-19'], 23.0%
+['Level 4 % 0-19', 'Level 2 % 40-59', 'white_per 0-19'], 21.3%
+['black_per 0-19', 'Level 2 % 0-19', 'Level 1 % 0-19'], 27.0%
+['ell_percent 0-19', 'sped_percent 0-19', 'Level 1 % 0-19'], 52.6%
+['Level 4 % 0-19', 'ell_percent 0-19', 'white_per 0-19'], 39.1%
+['Level 2 % 0-19', 'Level 1 % 0-19', 'white_per 0-19'], 22.8%
+['Level 4 % 0-19', 'Level 3 % 40-59', 'Level 1 % 0-19'], 22.9%
+['Level 3 % 40-59', 'Level 2 % 20-39', 'Level 1 % 0-19'], 23.9%
+['ell_percent 0-19', 'sped_percent 0-19', 'asian_per 0-19'], 42.5%
+['Level 3 % 40-59', 'Level 1 % 0-19', 'white_per 0-19'], 33.4%
+['Level 3 % 40-59', 'asian_per 0-19', 'white_per 0-19'], 26.9%
+['Level 2 % 0-19', 'sped_percent 0-19', 'Level 3+4 % 80-99'], 29.8%
+['Level 3+4 % 80-99', 'Level 1 % 0-19', 'asian_per 0-19'], 21.2%
+['black_per 0-19', 'sped_percent 0-19', 'Level 1 % 0-19'], 36.4%
+['ell_percent 0-19', 'Level 2 % 0-19', 'asian_per 0-19'], 21.3%
+['ell_percent 0-19', 'sped_percent 0-19', 'Level 3+4 % 80-99'], 22.7%
+['Level 2 % 40-59', 'white_per 0-19', 'asian_per 0-19'], 20.8%
+['Level 4 % 0-19', 'Level 3 % 40-59', 'asian_per 0-19'], 22.1%
+['ell_percent 0-19', 'Level 3 % 40-59', 'asian_per 0-19'], 29.3%
+['Level 4 % 20-39', 'sped_percent 0-19', 'Level 1 % 0-19'], 22.9%
+['Level 2 % 0-19', 'sped_percent 0-19', 'asian_per 0-19'], 21.2%
+['black_per 0-19', 'Level 1 % 0-19', 'Level 3+4 % 80-99'], 23.1%
+['ell_percent 0-19', 'Level 2 % 20-39', 'white_per 0-19'], 22.0%
+['ell_percent 0-19', 'sped_percent 0-19', 'asian_per 0-19', 'white_per 0-19'], 31.6%
+['Level 1 % 0-19', 'asian_per 0-19', 'Level 3 % 40-59', 'white_per 0-19'], 26.2%
+['sped_percent 0-19', 'Level 1 % 0-19', 'asian_per 0-19', 'Level 3 % 40-59'], 27.2%
+['ell_percent 0-19', 'Level 2 % 0-19', 'sped_percent 0-19', 'Level 3+4 % 80-99'], 22.7%
+['ell_percent 0-19', 'hispanic_per 0-19', 'sped_percent 0-19', 'Level 1 % 0-19'], 22.6%
+['ell_percent 0-19', 'sped_percent 0-19', 'Level 1 % 0-19', 'Level 3 % 40-59'], 29.2%
+['ell_percent 0-19', 'Level 1 % 0-19', 'asian_per 0-19', 'white_per 0-19'], 40.4%
+['ell_percent 0-19', 'Level 2 % 20-39', 'Level 1 % 0-19', 'asian_per 0-19'], 22.1%
+['Level 2 % 20-39', 'Level 1 % 0-19', 'asian_per 0-19', 'Level 4 % 0-19'], 23.5%
+['ell_percent 0-19', 'sped_percent 0-19', 'Level 1 % 0-19', 'Level 4 % 0-19'], 24.2%
+['Level 2 % 20-39', 'sped_percent 0-19', 'Level 1 % 0-19', 'asian_per 0-19'], 20.3%
+['Level 2 % 0-19', 'Level 1 % 0-19', 'asian_per 0-19', 'Level 3+4 % 80-99'], 21.1%
+['sped_percent 0-19', 'Level 1 % 0-19', 'black_per 0-19', 'Level 3 % 40-59'], 22.5%
+['Level 2 % 0-19', 'sped_percent 0-19', 'Level 3+4 % 80-99', 'black_per 0-19'], 20.5%
+['ell_percent 0-19', 'sped_percent 0-19', 'Level 4 % 0-19', 'white_per 0-19'], 25.6%
+['Level 1 % 0-19', 'Level 4 % 0-19', 'Level 3 % 40-59', 'white_per 0-19'], 21.3%
+['Level 2 % 0-19', 'sped_percent 0-19', 'Level 1 % 0-19', 'black_per 0-19'], 23.8%
+['ell_percent 0-19', 'Level 1 % 0-19', 'asian_per 0-19', 'Level 3 % 40-59'], 28.7%
+['ell_percent 0-19', 'sped_percent 0-19', 'asian_per 0-19', 'Level 4 % 0-19'], 25.7%
+['Level 2 % 0-19', 'Level 1 % 0-19', 'Level 3+4 % 80-99', 'black_per 0-19'], 23.1%
+['ell_percent 0-19', 'Level 2 % 0-19', 'Level 1 % 0-19', 'asian_per 0-19'], 21.3%
+['asian_per 0-19', 'Level 4 % 0-19', 'Level 3 % 40-59', 'white_per 0-19'], 20.8%
+['sped_percent 0-19', 'Level 1 % 0-19', 'asian_per 0-19', 'white_per 0-19'], 39.8%
+['ell_percent 0-19', 'sped_percent 0-19', 'Level 1 % 0-19', 'white_per 0-19'], 34.4%
+['ell_percent 0-19', 'Level 2 % 0-19', 'Level 1 % 0-19', 'Level 3+4 % 80-99'], 26.2%
+['ell_percent 0-19', 'Level 2 % 20-39', 'Level 1 % 0-19', 'white_per 0-19'], 20.5%
+['ell_percent 0-19', 'sped_percent 0-19', 'asian_per 0-19', 'Level 3 % 40-59'], 21.8%
+['ell_percent 0-19', 'Level 1 % 0-19', 'asian_per 0-19', 'Level 4 % 0-19'], 34.0%
+['Level 2 % 0-19', 'sped_percent 0-19', 'Level 1 % 0-19', 'asian_per 0-19'], 21.2%
+['Level 2 % 20-39', 'asian_per 0-19', 'Level 4 % 0-19', 'white_per 0-19'], 24.0%
+['ell_percent 0-19', 'Level 2 % 0-19', 'sped_percent 0-19', 'Level 1 % 0-19'], 27.0%
+['Level 1 % 0-19', 'asian_per 0-19', 'Level 4 % 0-19', 'Level 3 % 40-59'], 21.4%
+['ell_percent 0-19', 'sped_percent 0-19', 'Level 1 % 0-19', 'Level 3+4 % 80-99'], 22.7%
+['Level 2 % 20-39', 'Level 1 % 0-19', 'Level 3 % 40-59', 'white_per 0-19'], 20.3%
+['sped_percent 0-19', 'Level 1 % 0-19', 'asian_per 0-19', 'Level 4 % 0-19'], 31.3%
+['ell_percent 0-19', 'asian_per 0-19', 'Level 4 % 0-19', 'white_per 0-19'], 37.7%
+['sped_percent 0-19', 'Level 1 % 0-19', 'Level 3+4 % 80-99', 'black_per 0-19'], 20.5%
+['Level 2 % 20-39', 'Level 1 % 0-19', 'asian_per 0-19', 'white_per 0-19'], 24.9%
+['ell_percent 0-19', 'Level 1 % 0-19', 'Level 3 % 40-59', 'white_per 0-19'], 23.1%
+['sped_percent 0-19', 'Level 1 % 0-19', 'Level 4 % 0-19', 'white_per 0-19'], 32.0%
+['ell_percent 0-19', 'sped_percent 0-19', 'Level 1 % 0-19', 'black_per 0-19'], 22.3%
+['sped_percent 0-19', 'Level 1 % 0-19', 'Level 3 % 40-59', 'white_per 0-19'], 26.2%
+['Level 2 % 0-19', 'sped_percent 0-19', 'Level 1 % 0-19', 'Level 3+4 % 80-99'], 29.8%
+['sped_percent 0-19', 'Level 2 % 20-39', 'Level 1 % 0-19', 'white_per 0-19'], 21.2%
+['Level 2 % 40-59', 'asian_per 0-19', 'Level 4 % 0-19', 'white_per 0-19'], 20.8%
+['ell_percent 0-19', 'sped_percent 0-19', 'Level 1 % 0-19', 'asian_per 0-19'], 39.5%
+['sped_percent 0-19', 'asian_per 0-19', 'Level 4 % 0-19', 'white_per 0-19'], 34.2%
+['Level 1 % 0-19', 'asian_per 0-19', 'Level 4 % 0-19', 'white_per 0-19'], 43.3%
+['ell_percent 0-19', 'Level 1 % 0-19', 'Level 4 % 0-19', 'white_per 0-19'], 33.2%
+['Level 2 % 20-39', 'Level 1 % 0-19', 'Level 4 % 0-19', 'white_per 0-19'], 23.5%
+['Level 2 % 20-39', 'Level 1 % 0-19', 'asian_per 0-19', 'Level 3 % 40-59'], 20.6%
+['Level 3+4 % 80-99', 'ell_percent 0-19', 'Level 2 % 0-19', 'sped_percent 0-19', 'Level 1 % 0-19'], 22.7%
+['white_per 0-19', 'ell_percent 0-19', 'sped_percent 0-19', 'asian_per 0-19', 'Level 4 % 0-19'], 24.3%
+['Level 3 % 40-59', 'ell_percent 0-19', 'sped_percent 0-19', 'Level 1 % 0-19', 'asian_per 0-19'], 21.4%
+['ell_percent 0-19', 'sped_percent 0-19', 'Level 1 % 0-19', 'asian_per 0-19', 'Level 4 % 0-19'], 22.7%
+['white_per 0-19', 'ell_percent 0-19', 'sped_percent 0-19', 'Level 1 % 0-19', 'asian_per 0-19'], 28.6%
+['Level 3+4 % 80-99', 'black_per 0-19', 'Level 2 % 0-19', 'sped_percent 0-19', 'Level 1 % 0-19'], 20.5%
+['white_per 0-19', 'ell_percent 0-19', 'Level 1 % 0-19', 'asian_per 0-19', 'Level 4 % 0-19'], 31.8%
+['white_per 0-19', 'ell_percent 0-19', 'sped_percent 0-19', 'Level 1 % 0-19', 'Level 4 % 0-19'], 22.6%
+['Level 3 % 40-59', 'white_per 0-19', 'Level 1 % 0-19', 'asian_per 0-19', 'Level 4 % 0-19'], 20.0%
+['white_per 0-19', 'sped_percent 0-19', 'Level 1 % 0-19', 'asian_per 0-19', 'Level 4 % 0-19'], 29.8%
+['white_per 0-19', 'Level 2 % 20-39', 'Level 1 % 0-19', 'asian_per 0-19', 'Level 4 % 0-19'], 22.0%
+['white_per 0-19', 'ell_percent 0-19', 'sped_percent 0-19', 'Level 1 % 0-19', 'asian_per 0-19', 'Level 4 % 0-19'], 21.3%
+==High-confidence association rules (min_conf=80.0%)
+['Level 3+4 % 80-99']=> ['Level 1 % 0-19'] (Conf: 100.0%, Supp: 34.1%)
+['sped_percent 0-19', 'Level 3+4 % 80-99']=> ['Level 1 % 0-19'] (Conf: 100.0%, Supp: 29.8%)
+['ell_percent 0-19', 'Level 3+4 % 80-99']=> ['Level 1 % 0-19'] (Conf: 100.0%, Supp: 26.2%)
+['Level 2 % 20-39', 'Level 3+4 % 60-79']=> ['Level 1 % 0-19'] (Conf: 100.0%, Supp: 23.0%)
+['asian_per 0-19', 'Level 3+4 % 80-99']=> ['Level 1 % 0-19'] (Conf: 100.0%, Supp: 21.2%)
+['Level 2 % 0-19', 'Level 3+4 % 80-99']=> ['Level 1 % 0-19'] (Conf: 100.0%, Supp: 34.0%)
+['Level 4 % 20-39', 'sped_percent 0-19']=> ['Level 1 % 0-19'] (Conf: 100.0%, Supp: 22.9%)
+['Level 3+4 % 60-79', 'white_per 0-19']=> ['Level 1 % 0-19'] (Conf: 100.0%, Supp: 22.9%)
+['black_per 0-19', 'Level 3+4 % 80-99']=> ['Level 1 % 0-19'] (Conf: 100.0%, Supp: 23.1%)
+['Level 3+4 % 80-99', 'Level 2 % 0-19', 'asian_per 0-19']=> ['Level 1 % 0-19'] (Conf: 100.0%, Supp: 21.1%)
+['Level 2 % 0-19', 'sped_percent 0-19', 'Level 3+4 % 80-99']=> ['Level 1 % 0-19'] (Conf: 100.0%, Supp: 29.8%)
+['black_per 0-19', 'Level 2 % 0-19', 'Level 3+4 % 80-99']=> ['Level 1 % 0-19'] (Conf: 100.0%, Supp: 23.1%)
+['black_per 0-19', 'sped_percent 0-19', 'Level 3+4 % 80-99']=> ['Level 1 % 0-19'] (Conf: 100.0%, Supp: 20.5%)
+['ell_percent 0-19', 'Level 2 % 0-19', 'Level 3+4 % 80-99']=> ['Level 1 % 0-19'] (Conf: 100.0%, Supp: 26.2%)
+['ell_percent 0-19', 'sped_percent 0-19', 'Level 3+4 % 80-99']=> ['Level 1 % 0-19'] (Conf: 100.0%, Supp: 22.7%)
+['black_per 0-19', 'Level 2 % 0-19', 'sped_percent 0-19', 'Level 3+4 % 80-99']=> ['Level 1 % 0-19'] (Conf: 100.0%, Supp: 20.5%)
+['ell_percent 0-19', 'Level 2 % 0-19', 'sped_percent 0-19', 'Level 3+4 % 80-99']=> ['Level 1 % 0-19'] (Conf: 100.0%, Supp: 22.7%)
+['Level 2 % 0-19', 'sped_percent 0-19']=> ['Level 1 % 0-19'] (Conf: 100.0%, Supp: 35.6%)
+['Level 3+4 % 60-79']=> ['Level 1 % 0-19'] (Conf: 99.9%, Supp: 29.3%)
+['black_per 0-19', 'Level 2 % 0-19']=> ['Level 1 % 0-19'] (Conf: 99.9%, Supp: 27.0%)
+['ell_percent 0-19', 'Level 2 % 0-19', 'sped_percent 0-19']=> ['Level 1 % 0-19'] (Conf: 99.9%, Supp: 27.0%)
+['Level 4 % 20-39']=> ['Level 1 % 0-19'] (Conf: 99.9%, Supp: 26.9%)
+['black_per 0-19', 'Level 2 % 0-19', 'sped_percent 0-19']=> ['Level 1 % 0-19'] (Conf: 99.9%, Supp: 23.9%)
+['Level 3+4 % 60-79', 'asian_per 0-19']=> ['Level 1 % 0-19'] (Conf: 99.9%, Supp: 23.5%)
+['black_per 0-19', 'Level 3+4 % 80-99']=> ['Level 2 % 0-19'] (Conf: 99.9%, Supp: 23.1%)
+['black_per 0-19', 'Level 1 % 0-19', 'Level 3+4 % 80-99']=> ['Level 2 % 0-19'] (Conf: 99.9%, Supp: 23.1%)
+['Level 2 % 0-19', 'white_per 0-19']=> ['Level 1 % 0-19'] (Conf: 99.9%, Supp: 22.8%)
+['Level 3+4 % 60-79', 'sped_percent 0-19']=> ['Level 1 % 0-19'] (Conf: 99.9%, Supp: 22.1%)
+['ell_percent 0-19', 'Level 3+4 % 60-79']=> ['Level 1 % 0-19'] (Conf: 99.9%, Supp: 21.6%)
+['Level 2 % 0-19', 'sped_percent 0-19', 'asian_per 0-19']=> ['Level 1 % 0-19'] (Conf: 99.9%, Supp: 21.2%)
+['Level 2 % 0-19']=> ['Level 1 % 0-19'] (Conf: 99.9%, Supp: 41.4%)
+['black_per 0-19', 'sped_percent 0-19', 'Level 3+4 % 80-99']=> ['Level 2 % 0-19'] (Conf: 99.9%, Supp: 20.5%)
+['black_per 0-19', 'sped_percent 0-19', 'Level 1 % 0-19', 'Level 3+4 % 80-99']=> ['Level 2 % 0-19'] (Conf: 99.9%, Supp: 20.5%)
+['ell_percent 0-19', 'Level 2 % 0-19']=> ['Level 1 % 0-19'] (Conf: 99.9%, Supp: 31.7%)
+['Level 2 % 0-19', 'asian_per 0-19']=> ['Level 1 % 0-19'] (Conf: 99.9%, Supp: 26.3%)
+['ell_percent 0-19', 'Level 3+4 % 80-99']=> ['Level 2 % 0-19'] (Conf: 99.9%, Supp: 26.2%)
+['ell_percent 0-19', 'Level 1 % 0-19', 'Level 3+4 % 80-99']=> ['Level 2 % 0-19'] (Conf: 99.9%, Supp: 26.2%)
+['ell_percent 0-19', 'sped_percent 0-19', 'Level 3+4 % 80-99']=> ['Level 2 % 0-19'] (Conf: 99.9%, Supp: 22.7%)
+['ell_percent 0-19', 'sped_percent 0-19', 'Level 1 % 0-19', 'Level 3+4 % 80-99']=> ['Level 2 % 0-19'] (Conf: 99.9%, Supp: 22.7%)
+['Level 3+4 % 80-99']=> ['Level 2 % 0-19'] (Conf: 99.9%, Supp: 34.1%)
+['Level 1 % 0-19', 'Level 3+4 % 80-99']=> ['Level 2 % 0-19'] (Conf: 99.9%, Supp: 34.1%)
+['Level 3 % 40-59', 'Level 2 % 0-19']=> ['Level 1 % 0-19'] (Conf: 99.9%, Supp: 22.5%)
+['ell_percent 0-19', 'Level 2 % 0-19', 'asian_per 0-19']=> ['Level 1 % 0-19'] (Conf: 99.8%, Supp: 21.3%)
+['Level 3+4 % 80-99', 'asian_per 0-19']=> ['Level 2 % 0-19'] (Conf: 99.8%, Supp: 21.2%)
+['Level 3+4 % 80-99', 'Level 1 % 0-19', 'asian_per 0-19']=> ['Level 2 % 0-19'] (Conf: 99.8%, Supp: 21.2%)
+['sped_percent 0-19', 'Level 3+4 % 80-99']=> ['Level 2 % 0-19'] (Conf: 99.8%, Supp: 29.8%)
+['sped_percent 0-19', 'Level 1 % 0-19', 'Level 3+4 % 80-99']=> ['Level 2 % 0-19'] (Conf: 99.8%, Supp: 29.8%)
+['Level 2 % 40-59', 'white_per 0-19', 'asian_per 0-19']=> ['Level 4 % 0-19'] (Conf: 99.7%, Supp: 20.8%)
+['Level 2 % 40-59', 'asian_per 0-19']=> ['Level 4 % 0-19'] (Conf: 99.6%, Supp: 21.2%)
+['Level 2 % 40-59', 'white_per 0-19']=> ['Level 4 % 0-19'] (Conf: 99.5%, Supp: 21.4%)
+['black_per 0-19', 'Level 3 % 40-59']=> ['Level 1 % 0-19'] (Conf: 99.4%, Supp: 26.3%)
+['black_per 0-19', 'Level 3 % 40-59', 'sped_percent 0-19']=> ['Level 1 % 0-19'] (Conf: 99.4%, Supp: 22.7%)
+['Level 2 % 40-59']=> ['Level 4 % 0-19'] (Conf: 99.4%, Supp: 21.8%)
+['ell_percent 0-19', 'sped_percent 0-19', 'black_per 0-19']=> ['Level 1 % 0-19'] (Conf: 99.2%, Supp: 22.4%)
+['black_per 0-19', 'ell_percent 0-19']=> ['Level 1 % 0-19'] (Conf: 99.0%, Supp: 26.5%)
+['hispanic_per 60-79']=> ['white_per 0-19'] (Conf: 98.9%, Supp: 20.2%)
+['ell_percent 0-19', 'Level 3 % 40-59', 'sped_percent 0-19']=> ['Level 1 % 0-19'] (Conf: 98.6%, Supp: 29.6%)
+['Level 3 % 40-59', 'sped_percent 0-19']=> ['Level 1 % 0-19'] (Conf: 98.6%, Supp: 40.4%)
+['Level 4 % 0-19', 'Level 2 % 40-59']=> ['white_per 0-19'] (Conf: 98.4%, Supp: 21.6%)
+['Level 3 % 40-59']=> ['Level 1 % 0-19'] (Conf: 98.4%, Supp: 50.3%)
+['Level 3 % 40-59', 'ell_percent 0-19']=> ['Level 1 % 0-19'] (Conf: 98.4%, Supp: 37.5%)
+['Level 4 % 0-19', 'Level 2 % 40-59', 'asian_per 0-19']=> ['white_per 0-19'] (Conf: 98.4%, Supp: 21.1%)
+['Level 2 % 40-59']=> ['white_per 0-19'] (Conf: 98.4%, Supp: 21.8%)
+['Level 2 % 40-59', 'asian_per 0-19']=> ['white_per 0-19'] (Conf: 98.3%, Supp: 21.2%)
+['Level 3 % 40-59', 'sped_percent 0-19', 'ell_percent 0-19', 'asian_per 0-19']=> ['Level 1 % 0-19'] (Conf: 98.2%, Supp: 21.8%)
+['ell_percent 0-19', 'Level 3 % 40-59', 'asian_per 0-19']=> ['Level 1 % 0-19'] (Conf: 98.0%, Supp: 29.3%)
+['Level 3 % 40-59', 'sped_percent 0-19', 'asian_per 0-19']=> ['Level 1 % 0-19'] (Conf: 98.0%, Supp: 27.8%)
+['hispanic_per 0-19', 'asian_per 0-19']=> ['ell_percent 0-19'] (Conf: 97.9%, Supp: 21.8%)
+['Level 3 % 40-59', 'asian_per 0-19']=> ['Level 1 % 0-19'] (Conf: 97.9%, Supp: 36.9%)
+['Level 3 % 40-59', 'sped_percent 0-19', 'white_per 0-19']=> ['Level 1 % 0-19'] (Conf: 97.9%, Supp: 26.8%)
+['Level 3 % 40-59', 'white_per 0-19']=> ['Level 1 % 0-19'] (Conf: 97.7%, Supp: 34.2%)
+['Level 4 % 0-19', 'Level 2 % 40-59']=> ['asian_per 0-19'] (Conf: 97.6%, Supp: 21.6%)
+['Level 4 % 0-19', 'Level 2 % 40-59', 'white_per 0-19']=> ['asian_per 0-19'] (Conf: 97.6%, Supp: 21.3%)
+['ell_percent 0-19', 'Level 3 % 40-59', 'white_per 0-19']=> ['Level 1 % 0-19'] (Conf: 97.5%, Supp: 23.7%)
+['Level 2 % 40-59']=> ['asian_per 0-19'] (Conf: 97.4%, Supp: 21.8%)
+['Level 2 % 40-59', 'white_per 0-19']=> ['asian_per 0-19'] (Conf: 97.4%, Supp: 21.4%)
+['Level 3 % 40-59', 'white_per 0-19', 'asian_per 0-19']=> ['Level 1 % 0-19'] (Conf: 97.2%, Supp: 26.9%)
+['black_per 0-19', 'sped_percent 0-19']=> ['Level 1 % 0-19'] (Conf: 97.0%, Supp: 37.6%)
+['Level 3 % 40-59', 'Level 2 % 20-39']=> ['Level 1 % 0-19'] (Conf: 96.9%, Supp: 24.6%)
+['Level 4 % 0-19', 'Level 3 % 40-59']=> ['Level 1 % 0-19'] (Conf: 96.7%, Supp: 23.7%)
+['Level 3 % 40-59', 'Level 2 % 20-39', 'asian_per 0-19']=> ['Level 1 % 0-19'] (Conf: 96.5%, Supp: 21.4%)
+['Level 4 % 0-19', 'Level 3 % 40-59', 'asian_per 0-19']=> ['Level 1 % 0-19'] (Conf: 96.5%, Supp: 22.1%)
+['Level 4 % 0-19', 'Level 3 % 40-59', 'white_per 0-19']=> ['Level 1 % 0-19'] (Conf: 96.5%, Supp: 22.1%)
+['Level 3 % 40-59', 'Level 2 % 20-39', 'white_per 0-19']=> ['Level 1 % 0-19'] (Conf: 96.4%, Supp: 21.1%)
+['Level 4 % 0-19', 'Level 3 % 40-59', 'asian_per 0-19', 'white_per 0-19']=> ['Level 1 % 0-19'] (Conf: 96.4%, Supp: 20.8%)
+['black_per 0-19']=> ['Level 1 % 0-19'] (Conf: 96.3%, Supp: 44.1%)
+['Level 4 % 0-19', 'ell_percent 0-19', 'white_per 0-19']=> ['asian_per 0-19'] (Conf: 96.3%, Supp: 39.1%)
+['hispanic_per 0-19', 'sped_percent 0-19']=> ['Level 1 % 0-19'] (Conf: 96.1%, Supp: 25.8%)
+['Level 4 % 0-19', 'ell_percent 0-19']=> ['asian_per 0-19'] (Conf: 96.0%, Supp: 41.7%)
+['ell_percent 0-19', 'hispanic_per 0-19', 'sped_percent 0-19']=> ['Level 1 % 0-19'] (Conf: 95.9%, Supp: 23.6%)
+['Level 4 % 0-19', 'ell_percent 0-19', 'Level 1 % 0-19', 'white_per 0-19']=> ['asian_per 0-19'] (Conf: 95.8%, Supp: 33.2%)
+['Level 4 % 0-19', 'sped_percent 0-19', 'asian_per 0-19']=> ['white_per 0-19'] (Conf: 95.8%, Supp: 35.8%)
+['sped_percent 20-39']=> ['asian_per 0-19'] (Conf: 95.6%, Supp: 23.7%)
+['Level 4 % 0-19', 'white_per 0-19']=> ['asian_per 0-19'] (Conf: 95.5%, Supp: 54.6%)
+['Level 4 % 0-19', 'ell_percent 0-19', 'Level 1 % 0-19']=> ['asian_per 0-19'] (Conf: 95.5%, Supp: 35.6%)
+['Level 4 % 0-19', 'asian_per 0-19']=> ['white_per 0-19'] (Conf: 95.4%, Supp: 54.6%)
+['Level 4 % 0-19', 'sped_percent 0-19', 'Level 1 % 0-19', 'asian_per 0-19']=> ['white_per 0-19'] (Conf: 95.4%, Supp: 31.3%)
+['Level 3+4 % 40-59', 'white_per 0-19']=> ['Level 4 % 0-19'] (Conf: 95.2%, Supp: 21.1%)
+['Level 4 % 0-19', 'sped_percent 0-19']=> ['white_per 0-19'] (Conf: 95.1%, Supp: 38.4%)
+['Level 4 % 0-19']=> ['asian_per 0-19'] (Conf: 95.0%, Supp: 57.5%)
+['Level 4 % 0-19', 'Level 1 % 0-19', 'white_per 0-19']=> ['asian_per 0-19'] (Conf: 94.9%, Supp: 45.7%)
+['Level 3+4 % 40-59', 'Level 4 % 0-19']=> ['white_per 0-19'] (Conf: 94.9%, Supp: 21.2%)
+['Level 4 % 0-19']=> ['white_per 0-19'] (Conf: 94.9%, Supp: 57.5%)
+['Level 4 % 0-19', 'Level 1 % 0-19', 'asian_per 0-19']=> ['white_per 0-19'] (Conf: 94.8%, Supp: 45.7%)
+['Level 4 % 0-19', 'ell_percent 0-19', 'sped_percent 0-19', 'white_per 0-19']=> ['asian_per 0-19'] (Conf: 94.8%, Supp: 25.6%)
+['Level 4 % 0-19', 'sped_percent 0-19', 'Level 1 % 0-19']=> ['white_per 0-19'] (Conf: 94.7%, Supp: 33.8%)
+['Level 2 % 20-39', 'sped_percent 0-19']=> ['Level 1 % 0-19'] (Conf: 94.7%, Supp: 27.0%)
+['ell_percent 0-19', 'sped_percent 0-19']=> ['Level 1 % 0-19'] (Conf: 94.5%, Supp: 55.7%)
+['Level 4 % 0-19', 'Level 1 % 0-19']=> ['asian_per 0-19'] (Conf: 94.4%, Supp: 48.4%)
+['Level 4 % 0-19', 'ell_percent 0-19', 'sped_percent 0-19', 'asian_per 0-19']=> ['white_per 0-19'] (Conf: 94.4%, Supp: 25.7%)
+['Level 4 % 0-19', 'Level 3 % 40-59', 'white_per 0-19']=> ['asian_per 0-19'] (Conf: 94.3%, Supp: 22.1%)
+['white_per 0-19', 'ell_percent 0-19', 'sped_percent 0-19', 'Level 1 % 0-19', 'Level 4 % 0-19']=> ['asian_per 0-19'] (Conf: 94.3%, Supp: 22.6%)
+['Level 4 % 0-19', 'ell_percent 0-19', 'sped_percent 0-19']=> ['asian_per 0-19'] (Conf: 94.3%, Supp: 27.3%)
+['Level 4 % 0-19', 'Level 1 % 0-19']=> ['white_per 0-19'] (Conf: 94.2%, Supp: 48.4%)
+['Level 3+4 % 40-59']=> ['Level 4 % 0-19'] (Conf: 94.2%, Supp: 22.5%)
+['Level 4 % 0-19', 'Level 3 % 40-59', 'Level 1 % 0-19', 'white_per 0-19']=> ['asian_per 0-19'] (Conf: 94.2%, Supp: 21.3%)
+['hispanic_per 0-19']=> ['Level 1 % 0-19'] (Conf: 94.1%, Supp: 29.7%)
+['Level 4 % 0-19', 'ell_percent 0-19', 'asian_per 0-19']=> ['white_per 0-19'] (Conf: 94.1%, Supp: 40.0%)
+['black_per 0-19', 'asian_per 0-19']=> ['Level 1 % 0-19'] (Conf: 94.0%, Supp: 25.4%)
+['Level 4 % 0-19', 'Level 3 % 40-59', 'asian_per 0-19']=> ['white_per 0-19'] (Conf: 94.0%, Supp: 22.1%)
+['ell_percent 0-19', 'Level 2 % 20-39']=> ['Level 1 % 0-19'] (Conf: 94.0%, Supp: 26.8%)
+['Level 2 % 20-39', 'sped_percent 0-19', 'white_per 0-19']=> ['Level 1 % 0-19'] (Conf: 93.9%, Supp: 22.6%)
+['Level 3+4 % 40-59']=> ['white_per 0-19'] (Conf: 93.9%, Supp: 22.5%)
+['ell_percent 0-19', 'sped_percent 0-19', 'Level 1 % 0-19', 'asian_per 0-19', 'Level 4 % 0-19']=> ['white_per 0-19'] (Conf: 93.9%, Supp: 22.7%)
+['Level 2 % 20-39']=> ['Level 1 % 0-19'] (Conf: 93.9%, Supp: 36.4%)
+['Level 4 % 0-19', 'Level 3 % 40-59', 'Level 1 % 0-19', 'asian_per 0-19']=> ['white_per 0-19'] (Conf: 93.9%, Supp: 21.4%)
+['Level 4 % 0-19', 'ell_percent 0-19', 'sped_percent 0-19']=> ['white_per 0-19'] (Conf: 93.8%, Supp: 27.3%)
+['sped_percent 0-19']=> ['Level 1 % 0-19'] (Conf: 93.8%, Supp: 75.9%)
+['Level 4 % 0-19', 'Level 2 % 20-39', 'white_per 0-19']=> ['asian_per 0-19'] (Conf: 93.8%, Supp: 25.6%)
+['ell_percent 0-19', 'hispanic_per 0-19']=> ['Level 1 % 0-19'] (Conf: 93.8%, Supp: 27.4%)
+['Level 4 % 0-19', 'ell_percent 0-19', 'sped_percent 0-19', 'Level 1 % 0-19']=> ['asian_per 0-19'] (Conf: 93.8%, Supp: 24.2%)
+['Level 4 % 0-19', 'ell_percent 0-19']=> ['white_per 0-19'] (Conf: 93.8%, Supp: 41.7%)
+['Level 2 % 20-39', 'sped_percent 0-19', 'asian_per 0-19']=> ['Level 1 % 0-19'] (Conf: 93.8%, Supp: 21.7%)
+['Level 4 % 0-19', 'Level 2 % 20-39', 'asian_per 0-19']=> ['white_per 0-19'] (Conf: 93.7%, Supp: 25.6%)
+['Level 4 % 0-19', 'sped_percent 0-19', 'white_per 0-19']=> ['asian_per 0-19'] (Conf: 93.6%, Supp: 36.6%)
+['Level 4 % 0-19', 'Level 2 % 20-39', 'Level 1 % 0-19', 'white_per 0-19']=> ['asian_per 0-19'] (Conf: 93.5%, Supp: 23.5%)
+['Level 4 % 0-19', 'Level 2 % 20-39', 'Level 1 % 0-19', 'asian_per 0-19']=> ['white_per 0-19'] (Conf: 93.5%, Supp: 23.5%)
+['Level 4 % 0-19', 'ell_percent 0-19', 'Level 1 % 0-19', 'asian_per 0-19']=> ['white_per 0-19'] (Conf: 93.4%, Supp: 34.0%)
+['Level 4 % 0-19', 'ell_percent 0-19', 'sped_percent 0-19', 'Level 1 % 0-19']=> ['white_per 0-19'] (Conf: 93.4%, Supp: 24.2%)
+['ell_percent 0-19', 'Level 2 % 20-39', 'asian_per 0-19']=> ['Level 1 % 0-19'] (Conf: 93.4%, Supp: 23.6%)
+['hispanic_per 20-39']=> ['Level 1 % 0-19'] (Conf: 93.3%, Supp: 24.7%)
+['Level 4 % 0-19', 'Level 3 % 40-59']=> ['asian_per 0-19'] (Conf: 93.3%, Supp: 23.7%)
+['ell_percent 0-19', 'Level 2 % 20-39', 'white_per 0-19']=> ['Level 1 % 0-19'] (Conf: 93.2%, Supp: 22.0%)
+['Level 4 % 0-19', 'ell_percent 0-19', 'Level 1 % 0-19']=> ['white_per 0-19'] (Conf: 93.1%, Supp: 35.6%)
+['black_per 0-19', 'white_per 0-19']=> ['Level 1 % 0-19'] (Conf: 93.1%, Supp: 22.7%)
+['Level 2 % 20-39', 'white_per 0-19']=> ['Level 1 % 0-19'] (Conf: 93.1%, Supp: 30.7%)
+['Level 4 % 0-19', 'Level 3 % 40-59', 'Level 1 % 0-19']=> ['asian_per 0-19'] (Conf: 93.1%, Supp: 22.9%)
+['Level 4 % 0-19', 'sped_percent 0-19', 'Level 1 % 0-19', 'white_per 0-19']=> ['asian_per 0-19'] (Conf: 93.1%, Supp: 32.0%)
+['Level 2 % 20-39', 'asian_per 0-19']=> ['Level 1 % 0-19'] (Conf: 93.1%, Supp: 30.9%)
+['Level 4 % 0-19', 'Level 3 % 40-59']=> ['white_per 0-19'] (Conf: 93.0%, Supp: 23.7%)
+['Level 4 % 0-19', 'sped_percent 0-19']=> ['asian_per 0-19'] (Conf: 93.0%, Supp: 38.4%)
+['Level 4 % 0-19', 'Level 2 % 20-39']=> ['asian_per 0-19'] (Conf: 93.0%, Supp: 27.5%)
+['ell_percent 0-19', 'sped_percent 0-19', 'asian_per 0-19']=> ['Level 1 % 0-19'] (Conf: 92.9%, Supp: 42.5%)
+['Level 3+4 % 40-59']=> ['Level 1 % 0-19'] (Conf: 92.9%, Supp: 22.5%)
+['Level 4 % 0-19', 'Level 2 % 20-39']=> ['white_per 0-19'] (Conf: 92.9%, Supp: 27.5%)
+['Level 4 % 0-19', 'Level 3 % 40-59', 'Level 1 % 0-19']=> ['white_per 0-19'] (Conf: 92.8%, Supp: 22.9%)
+['ell_percent 0-19', 'hispanic_per 20-39']=> ['Level 1 % 0-19'] (Conf: 92.7%, Supp: 21.6%)
+['Level 4 % 0-19', 'Level 2 % 20-39', 'Level 1 % 0-19']=> ['asian_per 0-19'] (Conf: 92.7%, Supp: 25.3%)
+['Level 4 % 0-19', 'Level 2 % 20-39', 'Level 1 % 0-19']=> ['white_per 0-19'] (Conf: 92.7%, Supp: 25.3%)
+['black_per 20-39']=> ['asian_per 0-19'] (Conf: 92.7%, Supp: 22.8%)
+['Level 3+4 % 40-59']=> ['asian_per 0-19'] (Conf: 92.5%, Supp: 22.5%)
+['Level 4 % 0-19', 'sped_percent 0-19', 'Level 1 % 0-19']=> ['asian_per 0-19'] (Conf: 92.5%, Supp: 33.8%)
+['white_per 0-19', 'Level 2 % 20-39', 'asian_per 0-19']=> ['Level 1 % 0-19'] (Conf: 92.4%, Supp: 26.9%)
+['hispanic_per 0-19']=> ['ell_percent 0-19'] (Conf: 92.2%, Supp: 29.7%)
+['hispanic_per 0-19', 'asian_per 0-19']=> ['Level 1 % 0-19'] (Conf: 92.1%, Supp: 21.8%)
+['ell_percent 0-19', 'sped_percent 0-19', 'white_per 0-19']=> ['Level 1 % 0-19'] (Conf: 92.0%, Supp: 37.4%)
+['Level 4 % 0-19', 'Level 2 % 20-39']=> ['Level 1 % 0-19'] (Conf: 92.0%, Supp: 27.5%)
+['sped_percent 0-19', 'asian_per 0-19']=> ['Level 1 % 0-19'] (Conf: 91.9%, Supp: 55.7%)
+['hispanic_per 0-19', 'Level 1 % 0-19']=> ['ell_percent 0-19'] (Conf: 91.9%, Supp: 27.9%)
+['Level 4 % 0-19', 'Level 2 % 20-39', 'white_per 0-19']=> ['Level 1 % 0-19'] (Conf: 91.8%, Supp: 25.6%)
+['ell_percent 0-19']=> ['Level 1 % 0-19'] (Conf: 91.8%, Supp: 74.3%)
+['Level 4 % 0-19', 'Level 2 % 20-39', 'asian_per 0-19']=> ['Level 1 % 0-19'] (Conf: 91.7%, Supp: 25.6%)
+['sped_percent 0-19', 'white_per 0-19']=> ['Level 1 % 0-19'] (Conf: 91.6%, Supp: 55.0%)
+['Level 4 % 0-19', 'asian_per 0-19', 'Level 2 % 20-39', 'white_per 0-19']=> ['Level 1 % 0-19'] (Conf: 91.5%, Supp: 24.0%)
+['hispanic_per 0-19', 'sped_percent 0-19']=> ['ell_percent 0-19'] (Conf: 91.3%, Supp: 25.8%)
+['hispanic_per 0-19', 'sped_percent 0-19', 'Level 1 % 0-19']=> ['ell_percent 0-19'] (Conf: 91.1%, Supp: 24.8%)
+['ell_percent 0-19', 'asian_per 0-19', 'sped_percent 0-19', 'white_per 0-19']=> ['Level 1 % 0-19'] (Conf: 90.7%, Supp: 31.6%)
+['ell_percent 0-19', 'asian_per 0-19']=> ['Level 1 % 0-19'] (Conf: 90.0%, Supp: 60.5%)
+['white_per 0-19', 'sped_percent 0-19', 'asian_per 0-19']=> ['Level 1 % 0-19'] (Conf: 89.9%, Supp: 44.3%)
+['white_per 0-19', 'Level 2 % 20-39', 'asian_per 0-19']=> ['Level 4 % 0-19'] (Conf: 89.0%, Supp: 26.9%)
+['Level 4 % 0-19', 'ell_percent 0-19', 'sped_percent 0-19']=> ['Level 1 % 0-19'] (Conf: 88.8%, Supp: 27.3%)
+['hispanic_per 0-19', 'Level 1 % 0-19']=> ['sped_percent 0-19'] (Conf: 88.8%, Supp: 27.9%)
+['black_per 0-19', 'Level 3+4 % 80-99']=> ['sped_percent 0-19'] (Conf: 88.8%, Supp: 23.1%)
+['black_per 0-19', 'Level 1 % 0-19', 'Level 3+4 % 80-99']=> ['sped_percent 0-19'] (Conf: 88.8%, Supp: 23.1%)
+['black_per 0-19', 'Level 2 % 0-19', 'Level 3+4 % 80-99']=> ['sped_percent 0-19'] (Conf: 88.8%, Supp: 23.1%)
+['black_per 0-19', 'Level 2 % 0-19', 'Level 1 % 0-19', 'Level 3+4 % 80-99']=> ['sped_percent 0-19'] (Conf: 88.8%, Supp: 23.1%)
+['ell_percent 0-19', 'white_per 0-19']=> ['Level 1 % 0-19'] (Conf: 88.7%, Supp: 52.6%)
+['asian_per 0-19']=> ['Level 1 % 0-19'] (Conf: 88.6%, Supp: 78.8%)
+['Level 4 % 0-19', 'ell_percent 0-19', 'sped_percent 0-19', 'white_per 0-19']=> ['Level 1 % 0-19'] (Conf: 88.4%, Supp: 25.6%)
+['Level 4 % 0-19', 'ell_percent 0-19', 'sped_percent 0-19', 'asian_per 0-19']=> ['Level 1 % 0-19'] (Conf: 88.4%, Supp: 25.7%)
+['asian_per 0-19', 'Level 2 % 20-39', 'Level 1 % 0-19', 'white_per 0-19']=> ['Level 4 % 0-19'] (Conf: 88.2%, Supp: 24.9%)
+['black_per 0-19', 'Level 2 % 0-19']=> ['sped_percent 0-19'] (Conf: 88.2%, Supp: 27.0%)
+['black_per 0-19', 'Level 2 % 0-19', 'Level 1 % 0-19']=> ['sped_percent 0-19'] (Conf: 88.2%, Supp: 27.0%)
+['ell_percent 0-19', 'white_per 0-19']=> ['asian_per 0-19'] (Conf: 88.2%, Supp: 52.6%)
+['ell_percent 0-19', 'Level 2 % 20-39']=> ['asian_per 0-19'] (Conf: 88.1%, Supp: 26.8%)
+['white_per 0-19']=> ['Level 1 % 0-19'] (Conf: 88.1%, Supp: 75.3%)
+['ell_percent 0-19', 'hispanic_per 0-19', 'Level 1 % 0-19']=> ['sped_percent 0-19'] (Conf: 88.1%, Supp: 25.7%)
+['white_per 0-19', 'ell_percent 0-19', 'sped_percent 0-19', 'asian_per 0-19', 'Level 4 % 0-19']=> ['Level 1 % 0-19'] (Conf: 88.0%, Supp: 24.3%)
+['Level 4 % 0-19', 'sped_percent 0-19']=> ['Level 1 % 0-19'] (Conf: 87.9%, Supp: 38.4%)
+['Level 2 % 20-39', 'white_per 0-19']=> ['asian_per 0-19'] (Conf: 87.9%, Supp: 30.7%)
+['hispanic_per 20-39']=> ['ell_percent 0-19'] (Conf: 87.6%, Supp: 24.7%)
+['ell_percent 0-19', 'Level 2 % 20-39', 'Level 1 % 0-19']=> ['asian_per 0-19'] (Conf: 87.6%, Supp: 25.2%)
+['Level 4 % 0-19', 'sped_percent 0-19', 'white_per 0-19']=> ['Level 1 % 0-19'] (Conf: 87.5%, Supp: 36.6%)
+['Level 3+4 % 80-99']=> ['sped_percent 0-19'] (Conf: 87.5%, Supp: 34.1%)
+['Level 1 % 0-19', 'Level 3+4 % 80-99']=> ['sped_percent 0-19'] (Conf: 87.5%, Supp: 34.1%)
+['Level 2 % 0-19', 'Level 3+4 % 80-99']=> ['sped_percent 0-19'] (Conf: 87.5%, Supp: 34.0%)
+['Level 2 % 0-19', 'Level 1 % 0-19', 'Level 3+4 % 80-99']=> ['sped_percent 0-19'] (Conf: 87.5%, Supp: 34.0%)
+['Level 4 % 0-19', 'sped_percent 0-19', 'asian_per 0-19']=> ['Level 1 % 0-19'] (Conf: 87.4%, Supp: 35.8%)
+['Level 2 % 20-39', 'asian_per 0-19']=> ['white_per 0-19'] (Conf: 87.3%, Supp: 30.9%)
+['Level 2 % 20-39', 'Level 1 % 0-19', 'white_per 0-19']=> ['asian_per 0-19'] (Conf: 87.2%, Supp: 28.5%)
+['ell_percent 0-19', 'white_per 0-19', 'asian_per 0-19']=> ['Level 1 % 0-19'] (Conf: 87.2%, Supp: 46.3%)
+['Level 4 % 0-19', 'asian_per 0-19', 'sped_percent 0-19', 'white_per 0-19']=> ['Level 1 % 0-19'] (Conf: 87.0%, Supp: 34.2%)
+['hispanic_per 0-19']=> ['sped_percent 0-19'] (Conf: 87.0%, Supp: 29.7%)
+['hispanic_per 20-39', 'Level 1 % 0-19']=> ['ell_percent 0-19'] (Conf: 87.0%, Supp: 23.0%)
+['Level 3 % 40-59', 'Level 2 % 20-39']=> ['asian_per 0-19'] (Conf: 86.8%, Supp: 24.6%)
+['ell_percent 0-19', 'Level 1 % 0-19', 'white_per 0-19']=> ['asian_per 0-19'] (Conf: 86.7%, Supp: 46.6%)
+['Level 2 % 20-39', 'Level 1 % 0-19', 'asian_per 0-19']=> ['white_per 0-19'] (Conf: 86.7%, Supp: 28.7%)
+['ell_percent 0-19', 'Level 3+4 % 80-99']=> ['sped_percent 0-19'] (Conf: 86.7%, Supp: 26.2%)
+['ell_percent 0-19', 'Level 1 % 0-19', 'Level 3+4 % 80-99']=> ['sped_percent 0-19'] (Conf: 86.7%, Supp: 26.2%)
+['ell_percent 0-19', 'Level 2 % 0-19', 'Level 3+4 % 80-99']=> ['sped_percent 0-19'] (Conf: 86.6%, Supp: 26.2%)
+['ell_percent 0-19', 'Level 2 % 0-19', 'Level 1 % 0-19', 'Level 3+4 % 80-99']=> ['sped_percent 0-19'] (Conf: 86.6%, Supp: 26.2%)
+['Level 3 % 40-59', 'Level 2 % 20-39', 'Level 1 % 0-19']=> ['asian_per 0-19'] (Conf: 86.4%, Supp: 23.9%)
+['black_per 0-19', 'Level 3 % 40-59']=> ['sped_percent 0-19'] (Conf: 86.2%, Supp: 26.3%)
+['black_per 0-19', 'Level 3 % 40-59', 'Level 1 % 0-19']=> ['sped_percent 0-19'] (Conf: 86.2%, Supp: 26.2%)
+['asian_per 0-19', 'white_per 0-19']=> ['Level 1 % 0-19'] (Conf: 86.2%, Supp: 64.0%)
+['ell_percent 0-19', 'hispanic_per 0-19']=> ['sped_percent 0-19'] (Conf: 86.2%, Supp: 27.4%)
+['black_per 0-19', 'Level 2 % 0-19', 'sped_percent 0-19', 'Level 1 % 0-19']=> ['Level 3+4 % 80-99'] (Conf: 86.1%, Supp: 23.8%)
+['black_per 0-19', 'Level 2 % 0-19', 'sped_percent 0-19']=> ['Level 3+4 % 80-99'] (Conf: 86.1%, Supp: 23.9%)
+['Level 2 % 0-19', 'Level 1 % 0-19']=> ['sped_percent 0-19'] (Conf: 86.0%, Supp: 41.3%)
+['Level 2 % 0-19']=> ['sped_percent 0-19'] (Conf: 86.0%, Supp: 41.4%)
+['black_per 0-19', 'Level 1 % 0-19']=> ['sped_percent 0-19'] (Conf: 85.8%, Supp: 42.5%)
+['black_per 0-19', 'Level 2 % 0-19', 'Level 1 % 0-19']=> ['Level 3+4 % 80-99'] (Conf: 85.6%, Supp: 27.0%)
+['black_per 0-19', 'Level 2 % 0-19']=> ['Level 3+4 % 80-99'] (Conf: 85.5%, Supp: 27.0%)
+['Level 3 % 40-59', 'Level 2 % 20-39']=> ['white_per 0-19'] (Conf: 85.5%, Supp: 24.6%)
+['Level 4 % 0-19', 'ell_percent 0-19']=> ['Level 1 % 0-19'] (Conf: 85.4%, Supp: 41.7%)
+['ell_percent 0-19', 'Level 2 % 0-19', 'Level 1 % 0-19']=> ['sped_percent 0-19'] (Conf: 85.3%, Supp: 31.6%)
+['Level 4 % 20-39', 'Level 1 % 0-19']=> ['sped_percent 0-19'] (Conf: 85.3%, Supp: 26.9%)
+['ell_percent 0-19', 'Level 2 % 0-19']=> ['sped_percent 0-19'] (Conf: 85.2%, Supp: 31.7%)
+['Level 4 % 20-39']=> ['sped_percent 0-19'] (Conf: 85.2%, Supp: 26.9%)
+['black_per 0-19']=> ['sped_percent 0-19'] (Conf: 85.2%, Supp: 44.1%)
+['Level 3 % 40-59', 'Level 2 % 20-39', 'Level 1 % 0-19']=> ['white_per 0-19'] (Conf: 85.0%, Supp: 23.9%)
+['white_per 0-19']=> ['asian_per 0-19'] (Conf: 85.0%, Supp: 75.3%)
+['Level 4 % 0-19', 'ell_percent 0-19', 'asian_per 0-19']=> ['Level 1 % 0-19'] (Conf: 85.0%, Supp: 40.0%)
+['Level 4 % 0-19', 'ell_percent 0-19', 'white_per 0-19']=> ['Level 1 % 0-19'] (Conf: 84.8%, Supp: 39.1%)
+['Level 2 % 20-39']=> ['asian_per 0-19'] (Conf: 84.7%, Supp: 36.4%)
+['black_per 0-19', 'ell_percent 0-19', 'Level 1 % 0-19']=> ['sped_percent 0-19'] (Conf: 84.7%, Supp: 26.3%)
+['ell_percent 0-19', 'black_per 0-19']=> ['sped_percent 0-19'] (Conf: 84.5%, Supp: 26.5%)
+['ell_percent 0-19', 'sped_percent 0-19', 'white_per 0-19']=> ['asian_per 0-19'] (Conf: 84.4%, Supp: 37.4%)
+['Level 4 % 0-19', 'ell_percent 0-19', 'asian_per 0-19', 'white_per 0-19']=> ['Level 1 % 0-19'] (Conf: 84.4%, Supp: 37.7%)
+['Level 4 % 0-19']=> ['Level 1 % 0-19'] (Conf: 84.2%, Supp: 57.5%)
+['ell_percent 0-19', 'Level 2 % 0-19', 'sped_percent 0-19', 'Level 1 % 0-19']=> ['Level 3+4 % 80-99'] (Conf: 84.2%, Supp: 27.0%)
+['ell_percent 0-19', 'Level 2 % 0-19', 'sped_percent 0-19']=> ['Level 3+4 % 80-99'] (Conf: 84.2%, Supp: 27.0%)
+['Level 2 % 20-39']=> ['white_per 0-19'] (Conf: 84.2%, Supp: 36.4%)
+['Level 2 % 20-39', 'Level 1 % 0-19']=> ['asian_per 0-19'] (Conf: 84.0%, Supp: 34.2%)
+['Level 2 % 0-19', 'sped_percent 0-19', 'Level 1 % 0-19']=> ['Level 3+4 % 80-99'] (Conf: 83.7%, Supp: 35.6%)
+['Level 2 % 0-19', 'sped_percent 0-19']=> ['Level 3+4 % 80-99'] (Conf: 83.7%, Supp: 35.6%)
+['Level 4 % 0-19', 'asian_per 0-19']=> ['Level 1 % 0-19'] (Conf: 83.7%, Supp: 54.6%)
+['Level 4 % 0-19', 'white_per 0-19']=> ['Level 1 % 0-19'] (Conf: 83.7%, Supp: 54.6%)
+['Level 2 % 20-39', 'sped_percent 0-19']=> ['white_per 0-19'] (Conf: 83.6%, Supp: 27.0%)
+['Level 2 % 20-39', 'Level 1 % 0-19']=> ['white_per 0-19'] (Conf: 83.5%, Supp: 34.2%)
+['Level 2 % 20-39', 'white_per 0-19']=> ['Level 4 % 0-19'] (Conf: 83.4%, Supp: 30.7%)
+['ell_percent 0-19', 'sped_percent 0-19', 'Level 1 % 0-19', 'white_per 0-19']=> ['asian_per 0-19'] (Conf: 83.2%, Supp: 34.4%)
+['Level 1 % 0-19', 'white_per 0-19']=> ['asian_per 0-19'] (Conf: 83.2%, Supp: 66.3%)
+['Level 4 % 0-19', 'white_per 0-19', 'asian_per 0-19']=> ['Level 1 % 0-19'] (Conf: 83.1%, Supp: 52.1%)
+['Level 2 % 20-39', 'asian_per 0-19']=> ['Level 4 % 0-19'] (Conf: 83.0%, Supp: 30.9%)
+['Level 2 % 20-39', 'sped_percent 0-19', 'Level 1 % 0-19']=> ['white_per 0-19'] (Conf: 83.0%, Supp: 25.6%)
+['ell_percent 0-19', 'Level 2 % 0-19', 'Level 1 % 0-19']=> ['Level 3+4 % 80-99'] (Conf: 82.9%, Supp: 31.6%)
+['ell_percent 0-19', 'Level 2 % 0-19']=> ['Level 3+4 % 80-99'] (Conf: 82.8%, Supp: 31.7%)
+['Level 2 % 0-19', 'Level 1 % 0-19']=> ['Level 3+4 % 80-99'] (Conf: 82.3%, Supp: 41.3%)
+['Level 2 % 20-39', 'Level 1 % 0-19', 'white_per 0-19']=> ['Level 4 % 0-19'] (Conf: 82.3%, Supp: 28.5%)
+['Level 2 % 0-19']=> ['Level 3+4 % 80-99'] (Conf: 82.2%, Supp: 41.4%)
+['ell_percent 0-19', 'Level 2 % 20-39']=> ['white_per 0-19'] (Conf: 82.1%, Supp: 26.8%)
+['Level 2 % 20-39', 'Level 1 % 0-19', 'asian_per 0-19']=> ['Level 4 % 0-19'] (Conf: 81.8%, Supp: 28.7%)
+['asian_per 0-19', 'white_per 0-19']=> ['Level 4 % 0-19'] (Conf: 81.5%, Supp: 64.0%)
+['ell_percent 0-19', 'Level 2 % 20-39', 'Level 1 % 0-19']=> ['white_per 0-19'] (Conf: 81.4%, Supp: 25.2%)
+['ell_percent 0-19']=> ['asian_per 0-19'] (Conf: 81.3%, Supp: 74.3%)
+['ell_percent 0-19', 'white_per 0-19', 'asian_per 0-19']=> ['Level 4 % 0-19'] (Conf: 81.2%, Supp: 46.3%)
+['asian_per 0-19']=> ['white_per 0-19'] (Conf: 81.2%, Supp: 78.8%)
+['Level 2 % 0-19', 'asian_per 0-19']=> ['ell_percent 0-19'] (Conf: 81.0%, Supp: 26.3%)
+['Level 2 % 0-19', 'Level 1 % 0-19', 'asian_per 0-19']=> ['ell_percent 0-19'] (Conf: 81.0%, Supp: 26.3%)
+['Level 2 % 0-19', 'Level 1 % 0-19', 'asian_per 0-19']=> ['sped_percent 0-19'] (Conf: 80.8%, Supp: 26.3%)
+['Level 2 % 0-19', 'asian_per 0-19']=> ['sped_percent 0-19'] (Conf: 80.8%, Supp: 26.3%)
+['Level 2 % 0-19', 'Level 1 % 0-19', 'asian_per 0-19']=> ['Level 3+4 % 80-99'] (Conf: 80.5%, Supp: 26.3%)
+['Level 3 % 40-59', 'Level 1 % 0-19']=> ['sped_percent 0-19'] (Conf: 80.5%, Supp: 49.5%)
+['sped_percent 0-19', 'white_per 0-19']=> ['asian_per 0-19'] (Conf: 80.5%, Supp: 55.0%)
+['Level 2 % 0-19', 'asian_per 0-19']=> ['Level 3+4 % 80-99'] (Conf: 80.4%, Supp: 26.3%)
+['Level 3 % 40-59']=> ['sped_percent 0-19'] (Conf: 80.4%, Supp: 50.3%)
+['Level 2 % 20-39', 'sped_percent 0-19']=> ['asian_per 0-19'] (Conf: 80.3%, Supp: 27.0%)
+['Level 3+4 % 60-79']=> ['asian_per 0-19'] (Conf: 80.3%, Supp: 29.3%)
+['Level 3+4 % 60-79', 'Level 1 % 0-19']=> ['asian_per 0-19'] (Conf: 80.3%, Supp: 29.2%)
+['Level 3 % 20-39']=> ['Level 1 % 0-19'] (Conf: 80.1%, Supp: 28.8%)
