@@ -51,10 +51,12 @@ Matthew Bu (mb4753)
 * These datasets together can provide some insight into the correlation between demographics and test scores for students in grades 3-8.
 
 ## Internal Design
-We implemented the basic apriori algorithm but tweaked the data processing that gets fed into the main association rule function. Specifically, we had to find a way to group data since most of the items we were working with were percentages. Consequently, in our first trials, we would see association rules with specific complementary percentages (for example {male 59%}={female 41%}) which were accurate, but do not provide any real meaningful value. As a result, through trial and error, we grouped our items into 'buckets', the ideal size of which we found to be groups of 20 from 0-100. Also, for readability purposes, we append the column name to their respective values so we could tell what the items mean (note this does not affect the result of the apriori algorithm since every item would lead with their respective column name).
+We implemented the basic apriori algorithm but tweaked the data processing that gets fed into the main association rule function. Specifically, we had to find a way to group data since most of the items we were working with were percentages. Consequently, in our first trials, we would see association rules with specific complementary percentages (for example {male 59%}=>{female 41%}) which were accurate, but do not provide any real meaningful value. As a result, through trial and error, we grouped our items into 'buckets', the ideal size of which we found to be groups of 20 from 0-100. Also, for readability purposes, we append the column name to their respective values so we could tell what the items mean (note this does not affect the result of the apriori algorithm since every item would lead with their respective column name).
 
 ## Sample Run Command Line
-python3 main.py INTEGRATED-DATASET.csv 0.2 0.8 > example_run.txt
+`python3 main.py INTEGRATED-DATASET.csv 0.2 0.8 > example_run.txt`
 
 ## Additional Information
-        
+* The "Level" columns correspond to how students performed on the math exam. Level 1 is a low score and level 4 is a high score.
+* ell_percent is the percentage of the students who do not speak English as a first language.
+* sped_percent is the perentage of the students who receive special education. 
