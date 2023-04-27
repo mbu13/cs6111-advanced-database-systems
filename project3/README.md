@@ -72,8 +72,10 @@ Matthew Bu (mb4753)
 * These datasets together can provide some insight into how certain schools and school demographics affect test scores for students in grades 3-8 and graduation rates for high schoolers. These datasets can also shed light on which years had higher or lower test scores and graduation rates.
 
 ## Internal Design
+We implemented the basic apriori algorithm but tweaked the data processing that gets fed into the main association rule function. Specifically, we had to find a way to group data since most of the items we were working with were percentages. Consequently, in our first trials, we would see association rules with specific complementary percentages (for example {male 59%}={female 41%}) which were accurate, but do not provide any real meaningful value. As a result, through trial and error, we grouped our items into 'buckets', the ideal size of which we found to be groups of 20 from 0-100. Also, for readability purposes, we append the column name to their respective values so we could tell what the items mean (note this does not affect the result of the apriori algorithm since every item would lead with their respective column name).
 
 ## Sample Run Command Line
+python3 main.py INTEGRATED-DATASET.csv 0.2 0.8 > output.txt
 
 ## Additional Information
         
