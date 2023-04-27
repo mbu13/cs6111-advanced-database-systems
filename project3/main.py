@@ -6,7 +6,9 @@ import pandas as pd
 import pandasql as sql
 
 '''
-
+This was the original code to get all the large 1-item sets from the data.
+It took quite a while to run so we scrapped it in favor of the current method.
+We used sql to calculate the large 1-item sets for each column of the dataset.
 '''
 '''
 def one_item_sets(DF, sup):
