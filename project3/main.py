@@ -119,7 +119,7 @@ def apriori(filename, sup, conf):
             for col in reader.fieldnames:
                 if not row[col]:
                     continue
-                if row[col] and col not in {'DBN','Year','total_enrollment','Number Tested', 'male_per', 'female_per'}:
+                if row[col] # and col not in {'DBN','Year','total_enrollment','Number Tested', 'male_per', 'female_per'}:
                     # Map to a range
                     ranges = get_buckets(100, 20) 
                     group = None
